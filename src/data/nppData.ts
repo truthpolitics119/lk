@@ -1,0 +1,337 @@
+export const promises = [
+  {
+    id: 1,
+    title: "Renegotiate IMF Agreement",
+    promised: "Save Sri Lanka from the 'IMF death trap' and renegotiate the agreement",
+    reality: "Continued unquestioning adherence to IMF-imposed austerity. Zero renegotiation attempted.",
+    status: "broken",
+    icon: "Banknote",
+  },
+  {
+    id: 2,
+    title: "Reduce Tax Burden",
+    promised: "Remove taxes on food, medicine, and essentials",
+    reality: "VAT rose from 8% to 20%. Exemptions on essentials removed. World Bank called reforms 'particularly regressive.'",
+    status: "broken",
+    icon: "BarChart3",
+  },
+  {
+    id: 3,
+    title: "25% Salary Increase",
+    promised: "Increase public servant salaries by 25% immediately and every six months",
+    reality: "Only 8,250 rupees increase over 3 years for lowest grade. Overtime payments and allowances slashed.",
+    status: "broken",
+    icon: "Briefcase",
+  },
+  {
+    id: 4,
+    title: "Develop Country in 6 Months",
+    promised: "Achieve a wealthy country and comfortable life",
+    reality: "Economic output still below 2018 levels. 24.5% poverty rate — double pre-pandemic levels.",
+    status: "broken",
+    icon: "Construction",
+  },
+  {
+    id: 5,
+    title: "Stop Privatization",
+    promised: "Stop the privatization of the Electricity Board",
+    reality: "Proposed State Holding Company to restructure 400+ SOEs, paving way for privatizations, destroying 500,000 jobs.",
+    status: "broken",
+    icon: "Zap",
+  },
+  {
+    id: 6,
+    title: "Easter Attack Justice",
+    promised: "Provide justice for victims of the Easter attacks",
+    reality: "No publicly available information on any steps taken. No prosecution plan implemented.",
+    status: "broken",
+    icon: "Scale",
+  },
+  {
+    id: 7,
+    title: "Repeal PTA",
+    promised: "Repeal the Prevention of Terrorism Act",
+    reality: "Continued using the law while seeking to replace it with a similarly draconian alternative.",
+    status: "broken",
+    icon: "ScrollText",
+  },
+  {
+    id: 8,
+    title: "Provincial Council Elections",
+    promised: "Hold Provincial Council Elections",
+    reality: "Remains unfulfilled. Key campaign promise abandoned after gaining power.",
+    status: "broken",
+    icon: "Vote",
+  },
+];
+
+export const scandals = [
+  {
+    id: 1,
+    title: "Coal Procurement Fraud",
+    subtitle: "Norochcholai Coal Scandal",
+    severity: "critical",
+    date: "Early 2026",
+    summary: "Multi-billion rupee coal tender awarded to Trident Champhar Limited (India) in violation of tender procedures. NAO found the company shouldn't have even been considered.",
+    details: [
+      "National Audit Office found violations in awarding the coal tender",
+      "Substandard coal reduces power generation efficiency",
+      "Energy Minister Kumara Jayakody forced to resign",
+      "NPP used parliamentary majority to defeat No-Confidence Motion on April 10",
+      "Costs ultimately passed on to consumers through higher electricity bills",
+    ],
+    color: "#8B0000",
+    icon: "Pickaxe",
+  },
+  {
+    id: 2,
+    title: "$2.5 Million Treasury Heist",
+    subtitle: "Cybercrime & Negligence",
+    severity: "critical",
+    date: "2025",
+    summary: "USD 2.5 million lost to hackers due to negligent cross-border payment practices at the Treasury. Additional $625,000 transferred to US Post remains missing.",
+    details: [
+      "10 fraudulent transactions — not a simple mistake",
+      "Finance Secretary refused to accept responsibility",
+      "Ex-NPP MP Harshana Suriyapperuma appointed as Treasury Secretary in June 2025",
+      "NPP 'deeply regrets' the appointment",
+      "Sri Lanka exposed as fertile ground for cybercrime due to weak digital security",
+    ],
+    color: "#B8860B",
+    icon: "Laptop",
+  },
+  {
+    id: 3,
+    title: "Minister Wealth Scandal",
+    subtitle: "Rs. 275 Million 'Marxist' Ministers",
+    severity: "high",
+    date: "September 2025",
+    summary: "Trade Minister Wasantha Samarasinghe's declared assets revealed Rs. 275 million in property, cryptocurrency, and investments — contradicting his Marxist working-class persona.",
+    details: [
+      "Commercial building: Rs. 150 million",
+      "Three-storey commercial property: Rs. 75 million",
+      "Toyota Prius + solar units + cryptocurrency holdings",
+      "Agriculture Minister Lal Kantha owns Rs. 80 million+ property",
+      "SJB filed CIABOC complaint against 6 NPP/JVP ministers",
+    ],
+    color: "#8B0000",
+    icon: "Home",
+  },
+  {
+    id: 4,
+    title: "Education Module Scandal",
+    subtitle: "Inappropriate Content in Schools",
+    severity: "medium",
+    date: "2025",
+    summary: "Grade 6 online learning module contained embedded links redirecting students to inappropriate content. Former speaker used forged educational certificates — no action taken.",
+    details: [
+      "Inappropriate links embedded in official Grade 6 curriculum",
+      "Education reforms subsequently abandoned",
+      "No action against former speaker with forged certificates",
+      "Ministry failed to verify content before distribution",
+    ],
+    color: "#DAA520",
+    icon: "BookOpen",
+  },
+  {
+    id: 5,
+    title: "Political Appointments Scandal",
+    subtitle: "Loyalty Over Competence",
+    severity: "high",
+    date: "2024–2025",
+    summary: "Most senior state positions filled by JVP loyalists lacking qualifications. President had to repeatedly defend appointed officials in Parliament.",
+    details: [
+      "Central Bank, Treasury, and ministries staffed by party loyalists",
+      "Forced resignations and bans on resignations of competent officials",
+      "AKD repeatedly defended unqualified appointments in Parliament",
+      "Auditor General position left vacant 10 months",
+      "Constitutional Council used to approve more pliable candidates",
+    ],
+    color: "#8B4513",
+    icon: "Theater",
+  },
+  {
+    id: 6,
+    title: "Health Spending Cuts",
+    subtitle: "Hospitals & Medicine Shortages",
+    severity: "high",
+    date: "2025 Budget",
+    summary: "Health budget cut from Rs. 410 billion (2024) to Rs. 383 billion (2025), worsening medicine shortages and hospital conditions despite election promises.",
+    details: [
+      "Rs. 27 billion cut in health spending",
+      "Medicine shortages worsened across public hospitals",
+      "Hospital conditions deteriorated",
+      "Contradicts campaign promises to improve healthcare",
+      "Austerity prioritized over humanitarian needs",
+    ],
+    color: "#8B0000",
+    icon: "Hospital",
+  },
+];
+
+export const povertyData = [
+  { year: "2019", poverty: 12.7, food_insecurity: 14 },
+  { year: "2020", poverty: 11.7, food_insecurity: 15 },
+  { year: "2021", poverty: 13.1, food_insecurity: 18 },
+  { year: "2022", poverty: 25.0, food_insecurity: 30 },
+  { year: "2023", poverty: 24.9, food_insecurity: 27 },
+  { year: "2024", poverty: 24.5, food_insecurity: 26 },
+];
+
+export const vatData = [
+  { year: "2019", vat: 15 },
+  { year: "2020", vat: 8 },
+  { year: "2021", vat: 8 },
+  { year: "2022", vat: 12 },
+  { year: "2023", vat: 18 },
+  { year: "2024", vat: 20 },
+];
+
+export const voteShareData = [
+  { election: "Presidential\n2024", votes: 6800000, percentage: 42.3, label: "Sept 2024" },
+  { election: "Parliamentary\n2024", votes: 6867000, percentage: 61.6, label: "Nov 2024" },
+  { election: "Local Council\n2025", votes: 4500000, percentage: 34.2, label: "May 2025" },
+];
+
+export const ministersWealth = [
+  { name: "Wasantha Samarasinghe", role: "Trade Minister", wealth: 275, portfolio: "Buildings, crypto, stocks, solar" },
+  { name: "Lal Kantha", role: "Agriculture Minister", wealth: 80, portfolio: "Property, luxury house" },
+  { name: "Sunil Handunetti", role: "Minister", wealth: 45, portfolio: "Property, assets" },
+  { name: "Bimal Rathnayake", role: "Minister", wealth: 38, portfolio: "Property, investments" },
+  { name: "Dr. Nalinda Jayathissa", role: "Minister", wealth: 32, portfolio: "Property, assets" },
+  { name: "Kumara Jayakody", role: "Energy Minister (resigned)", wealth: 55, portfolio: "Property, investments" },
+];
+
+export const economicComparison = [
+  { category: "Poverty Rate", promised: 10, actual: 24.5, unit: "%" },
+  { category: "Salary Increase", promised: 25, actual: 3.5, unit: "%" },
+  { category: "Health Budget Growth", promised: 15, actual: -6.5, unit: "%" },
+  { category: "VAT Rate", promised: 8, actual: 20, unit: "%" },
+];
+
+export const jvpTimeline = [
+  {
+    year: "1965",
+    event: "JVP Founded",
+    description: "Rohana Wijeweera founds the Janatha Vimukthi Peramuna as a Marxist-Leninist movement",
+    type: "founding",
+    icon: "Sprout",
+  },
+  {
+    year: "1971",
+    event: "First Armed Insurrection",
+    description: "JVP launches armed uprising against PM Sirimavo Bandaranaike's government. ~5,000 lives lost. Economy of rural areas devastated.",
+    type: "violence",
+    icon: "Flame",
+  },
+  {
+    year: "1971–1977",
+    event: "Proscription & Imprisonment",
+    description: "JVP banned, leaders imprisoned following failed insurrection",
+    type: "suppression",
+    icon: "Lock",
+  },
+  {
+    year: "1983",
+    event: "Re-enters Politics",
+    description: "JVP re-enters mainstream democratic politics after lifting of ban",
+    type: "political",
+    icon: "Vote",
+  },
+  {
+    year: "1987–1989",
+    event: "Second Armed Insurrection",
+    description: "Second uprising against Indo-Sri Lanka Accord. ~60,000 people killed extrajudicially. Country paralyzed for 3 years by enforced hartals.",
+    type: "violence",
+    icon: "Skull",
+  },
+  {
+    year: "1989",
+    event: "Leadership Eliminated",
+    description: "Rohana Wijeweera and most JVP leaders killed. JVP decimated but survives.",
+    type: "suppression",
+    icon: "Skull",
+  },
+  {
+    year: "1994",
+    event: "Electoral Politics",
+    description: "JVP commits to parliamentary democracy, abandons revolutionary path",
+    type: "political",
+    icon: "Landmark",
+  },
+  {
+    year: "2004–2005",
+    event: "Government Coalition",
+    description: "JVP joins UPFA government coalition under Mahinda Rajapaksa",
+    type: "political",
+    icon: "Handshake",
+  },
+  {
+    year: "2019",
+    event: "NPP Alliance Formed",
+    description: "JVP forms National People's Power (NPP) coalition to broaden appeal beyond traditional base",
+    type: "political",
+    icon: "Globe",
+  },
+  {
+    year: "2022",
+    event: "Aragalaya Protest Wave",
+    description: "Sri Lanka economic collapse. Mass protests force President Gotabaya Rajapaksa to resign. NPP rides anti-establishment wave.",
+    type: "political",
+    icon: "Hand",
+  },
+  {
+    year: "Sept 2024",
+    event: "Presidential Victory",
+    description: "AKD wins presidency with 42.3% of vote — first time without 50% majority requiring second preference counting",
+    type: "victory",
+    icon: "Trophy",
+  },
+  {
+    year: "Nov 2024",
+    event: "Parliamentary Supermajority",
+    description: "NPP wins 159 seats — absolute majority. Promises 'system change', anti-corruption, economic relief.",
+    type: "victory",
+    icon: "Landmark",
+  },
+  {
+    year: "2025",
+    event: "Scandals Erupt",
+    description: "Coal fraud, Treasury heist, minister wealth scandals, media suppression, vote share collapses 34%",
+    type: "scandal",
+    icon: "Flame",
+  },
+  {
+    year: "2026",
+    event: "Credibility Crisis",
+    description: "Coal NAO report, No-Confidence motion defeated by parliamentary steamroller, UNHRC human rights report released",
+    type: "scandal",
+    icon: "AlertTriangle",
+  },
+];
+
+export const keyStats = [
+  { label: "Lives Lost — 1971 Uprising", value: "5,000+", icon: "Skull", color: "#8B0000" },
+  { label: "Lives Lost — 1987-89 Uprising", value: "60,000+", icon: "Skull", color: "#8B0000" },
+  { label: "Treasury Heist", value: "$2.5M", icon: "Laptop", color: "#B8860B" },
+  { label: "Vote Share Dropped in 6 months", value: "34%", icon: "TrendingDown", color: "#8B0000" },
+  { label: "Poverty Rate (2024)", value: "24.5%", icon: "Frown", color: "#8B4513" },
+  { label: "VAT Rate (from 8% to)", value: "20%", icon: "BarChart3", color: "#8B0000" },
+  { label: "Minister's Wealth (Samarasinghe)", value: "Rs.275M", icon: "Home", color: "#B8860B" },
+  { label: "Health Budget Cut", value: "Rs.27B", icon: "Hospital", color: "#8B0000" },
+];
+
+export const localElectionData = [
+  { party: "NPP", councils: 133, percentage: 39.2, color: "#DC143C" },
+  { party: "SJB", councils: 78, percentage: 23.0, color: "#FF8C00" },
+  { party: "SLPP", councils: 44, percentage: 13.0, color: "#4682B4" },
+  { party: "UNP", councils: 35, percentage: 10.3, color: "#228B22" },
+  { party: "Others", councils: 49, percentage: 14.5, color: "#808080" },
+];
+
+export const insurrectionCosts = [
+  { conflict: "1971 JVP Insurrection", cost: 2.5, deaths: 5000 },
+  { conflict: "1987-89 JVP Insurrection", cost: 15, deaths: 60000 },
+  { conflict: "LTTE Civil War (1983-2009)", cost: 200, deaths: 100000 },
+  { conflict: "Post-2019 Security Costs", cost: 8, deaths: 269 },
+];

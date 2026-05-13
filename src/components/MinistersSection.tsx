@@ -1,0 +1,155 @@
+import React from "react";
+import {
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell,
+} from "recharts";
+import { ministersWealth } from "../data/nppData";
+import LucideIcon from "./LucideIcon";
+
+const wealthColors = ["#8B0000", "#B8860B", "#8B4513", "#6B0000", "#A0522D", "#800000"];
+
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-[#1a0505] border border-[#8B0000]/50 rounded-xl p-3 shadow-xl">
+        <p className="text-white font-bold text-sm mb-1">{label}</p>
+        {payload.map((p: any, i: number) => (
+          <p key={i} className="text-[#DAA520] text-sm">Rs. {p.value}M declared wealth</p>
+        ))}
+      </div>
+    );
+  }
+  return null;
+};
+
+const MinistersSection: React.FC = () => {
+  return (
+    <section id="ministers" className="py-20 bg-[#0d0d00] relative">
+      <div className="h-1 absolute top-0 left-0 right-0 flex">
+        <div className="flex-1 bg-[#8B0000]" />
+        <div className="w-20 bg-[#DAA520]" />
+        <div className="w-20 bg-[#FF8C00]" />
+        <div className="flex-1 bg-[#006400]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 bg-[#B8860B]/30 border border-[#DAA520]/50 rounded-full px-4 py-1.5 mb-4">
+            <span className="w-2 h-2 bg-[#DAA520] rounded-full animate-pulse" />
+            <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 3</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+            Marxist Ministers,<br /><span className="text-[#DAA520]">Capitalist Wallets</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            The JVP presented itself as champions of the working class for decades. Their declared wealth tells a very different story.
+          </p>
+        </div>
+
+        {/* Featured scandal: Wasantha Samarasinghe */}
+        <div className="bg-gradient-to-br from-[#1a1500] to-[#0d0d00] border border-[#DAA520]/30 rounded-2xl p-6 mb-8">
+          <div className="flex flex-col md:flex-row gap-6 items-start">
+            <div className="flex-shrink-0">
+              <div className="w-20 h-20 bg-[#DAA520]/20 border-2 border-[#DAA520]/50 rounded-full flex items-center justify-center">
+                <LucideIcon name="User" size={40} className="text-[#DAA520]" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2 flex-wrap">
+                <span className="bg-[#DAA520]/20 text-[#DAA520] text-xs font-bold px-3 py-1 rounded-full">Trade & Commerce Minister</span>
+                <span className="bg-[#8B0000]/30 text-[#FF6B6B] text-xs px-2 py-1 rounded-full flex items-center gap-1.5">
+                  <LucideIcon name="ShieldAlert" size={12} /> Under CIABOC Investigation
+                </span>
+              </div>
+              <h3 className="text-white font-black text-2xl mb-1">Wasantha Samarasinghe</h3>
+              <p className="text-[#DAA520] font-semibold mb-3">Declared Wealth: <span className="text-2xl font-black text-white">Rs. 275 Million</span></p>
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                A self-proclaimed Marxist trade union firebrand who spent decades fighting for workers' rights — 
+                now revealed to own commercial buildings, cryptocurrency portfolios, stock market investments, solar power units, 
+                and luxury vehicles. <span className="text-[#FF6B6B] font-semibold">While preaching Marxism publicly, he was practicing capitalism privately.</span>
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {[
+                  { item: "Commercial Building", value: "Rs. 150M" },
+                  { item: "3-Storey Property", value: "Rs. 75M" },
+                  { item: "Luxury House", value: "Rs. 10M" },
+                  { item: "Solar Power Units", value: "Rs. 6.5M" },
+                  { item: "Toyota Prius", value: "Rs. 15M" },
+                  { item: "Crypto + Stocks", value: "Rs. 2M+" },
+                ].map((asset, i) => (
+                  <div key={i} className="bg-[#0d0d00] border border-[#DAA520]/20 rounded-lg p-2">
+                    <div className="text-[#DAA520] font-bold text-xs">{asset.value}</div>
+                    <div className="text-gray-400 text-xs mt-0.5">{asset.item}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bar chart: all ministers */}
+        <div className="bg-[#1a1500] border border-[#3a2500] rounded-2xl p-6 mb-8">
+          <h3 className="text-white font-bold text-lg mb-2">Declared Wealth of NPP Ministers Under Investigation</h3>
+          <p className="text-gray-400 text-sm mb-5">Values in Rs. Million — all from official CIABOC asset declarations</p>
+          <ResponsiveContainer width="100%" height={280}>
+            <BarChart data={ministersWealth} layout="vertical">
+              <CartesianGrid strokeDasharray="3 3" stroke="#2a2000" />
+              <XAxis type="number" stroke="#666" tick={{ fill: "#999", fontSize: 11 }} tickFormatter={(v) => `Rs.${v}M`} />
+              <YAxis type="category" dataKey="name" stroke="#666" tick={{ fill: "#ccc", fontSize: 10 }} width={140} />
+              <Tooltip content={<CustomTooltip />} />
+              <Bar dataKey="wealth" radius={[0, 6, 6, 0]} label={{ position: "right", fill: "#DAA520", fontSize: 11, formatter: (v: any) => `Rs.${v}M` }}>
+                {ministersWealth.map((_, i) => (
+                  <Cell key={i} fill={wealthColors[i % wealthColors.length]} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Lal Kantha callout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-[#1a1500] border border-[#DAA520]/20 rounded-2xl p-5">
+            <div className="w-12 h-12 bg-black/40 rounded-xl flex items-center justify-center border border-[#DAA520]/20 mb-4">
+              <LucideIcon name="Home" size={24} className="text-[#DAA520]" />
+            </div>
+            <h3 className="text-white font-bold text-lg mb-2">Minister Lal Kantha</h3>
+            <p className="text-[#DAA520] text-sm font-semibold mb-3">Agriculture Minister — Rs. 80M+ Declared Property</p>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Lal Kantha, who <strong className="text-white">lectures civil servants on Marxism</strong> and conducts Lenin reading rallies, 
+              owns a three-storey luxury house and properties valued at over Rs. 80 million. The controversy intensified 
+              amid the coal scam eruption and Energy Minister's resignation.
+            </p>
+          </div>
+          <div className="bg-[#1a0505] border border-[#8B0000]/30 rounded-2xl p-5">
+            <div className="w-12 h-12 bg-black/40 rounded-xl flex items-center justify-center border border-[#8B0000]/20 mb-4">
+              <LucideIcon name="Scale" size={24} className="text-[#FF6B6B]" />
+            </div>
+            <h3 className="text-white font-bold text-lg mb-2">CIABOC Investigation</h3>
+            <p className="text-[#FF6B6B] text-sm font-semibold mb-3">September 2025 — SJB Complaint Filed</p>
+            <p className="text-gray-300 text-sm leading-relaxed mb-3">
+              The SJB filed a formal complaint with Sri Lanka's Commission to Investigate Allegations of Bribery or Corruption (CIABOC) 
+              against the following NPP ministers:
+            </p>
+            <ul className="space-y-1.5">
+              {["Wasantha Samarasinghe", "Sunil Handunetti", "Bimal Rathnayake", "Dr. Nalinda Jayathissa", "Kumara Jayakody", "Deputy Min. Sunil Watagala"].map((name, i) => (
+                <li key={i} className="text-gray-300 text-sm flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[#DAA520] rounded-full flex-shrink-0" />
+                  {name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Quote */}
+        <div className="mt-8 bg-[#1a1500] border-l-4 border-[#DAA520] rounded-xl p-5">
+          <p className="text-gray-300 italic leading-relaxed text-lg">
+            "With his left hand he holds the workers' hammer and peasants' sickle, while with his right he holds title to land and buildings, deposit certificates and even blue-chip cryptocurrency, and has simultaneously pole vaulted to the upper rungs of both the political and capitalist ladders."
+          </p>
+          <p className="text-[#DAA520] font-semibold mt-3 text-sm">— Sri Lanka Guardian, on Wasantha Samarasinghe</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MinistersSection;
