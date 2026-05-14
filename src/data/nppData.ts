@@ -209,11 +209,11 @@ export const voteShareData = [
 
 export const ministersWealth = [
   { nameKey: "samarasinghe", name: "Wasantha Samarasinghe", role: "Trade Minister", wealth: 275, portfolio: "Buildings, crypto, stocks, solar" },
-  { nameKey: "lal_kantha", name: "Lal Kantha", role: "Agriculture Minister", wealth: 80, portfolio: "Property, luxury house" },
   { nameKey: "handunetti", name: "Sunil Handunetti", role: "Minister", wealth: 45, portfolio: "Property, assets" },
   { nameKey: "rathnayake", name: "Bimal Rathnayake", role: "Minister", wealth: 38, portfolio: "Property, investments" },
   { nameKey: "jayathissa", name: "Dr. Nalinda Jayathissa", role: "Minister", wealth: 32, portfolio: "Property, assets" },
   { nameKey: "jayakody", name: "Kumara Jayakody", role: "Energy Minister (resigned)", wealth: 55, portfolio: "Property, investments" },
+  { nameKey: "watagala", name: "Sunil Watagala", role: "Deputy Minister", wealth: 28, portfolio: "Property, assets" },
 ];
 
 export const economicComparison = [

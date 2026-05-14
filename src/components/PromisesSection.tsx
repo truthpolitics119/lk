@@ -55,10 +55,10 @@ const PromisesSection: React.FC = () => {
           {promises.map((promise) => (
             <div
               key={promise.id}
-              className="group bg-[#1a0505] border border-[#3a1010] hover:border-[#8B0000]/60 rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer"
+              className="group bg-[#1a0505] border border-[#3a1010] hover:border-[#8B0000]/60 rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer flex flex-col"
               onClick={() => setExpanded(expanded === promise.id ? null : promise.id)}
             >
-              <div className="p-5">
+              <div className="p-5 flex-1">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-[#8B0000]/20 rounded-xl flex items-center justify-center border border-[#8B0000]/30 group-hover:border-[#8B0000]/60 transition-all">
                     <LucideIcon name={promise.icon} size={24} className="text-[#FF6B6B]" />
@@ -103,7 +103,7 @@ const PromisesSection: React.FC = () => {
               </div>
 
               {/* Bottom accent */}
-              <div className="h-0.5 bg-gradient-to-r from-[#8B0000] via-[#DAA520] to-[#8B0000] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-1 bg-gradient-to-r from-[#8B0000] via-[#DAA520] to-[#006400] opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-auto" />
             </div>
           ))}
         </div>

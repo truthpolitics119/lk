@@ -56,7 +56,7 @@ const StatisticsSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 4</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("stats.heading").split("&")[0]} & <span className="text-[#DAA520]">{t("stats.heading").split("&")[1]?.trim() || t("stats.heading").split(" ").slice(1).join(" ")}</span>
+            {t("stats.heading").split("|")[0]} <span className="text-[#DAA520]">{t("stats.heading").split("|")[1]}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("stats.intro")}

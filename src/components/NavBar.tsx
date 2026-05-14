@@ -62,22 +62,23 @@ const NavBar: React.FC = () => {
             <button
               key={s.id}
               onClick={() => scrollTo(s.id)}
-              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
-                active === s.id
-                  ? "bg-[#DAA520] text-black"
-                  : "text-gray-300 hover:text-white hover:bg-white/10"
+              className={`px-3 py-2 text-xs font-bold transition-all duration-200 relative group ${
+                active === s.id ? "text-[#DAA520]" : "text-gray-400 hover:text-white"
               }`}
             >
               {t(s.labelKey)}
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#DAA520] transition-all duration-300 ${
+                active === s.id ? "w-full" : "w-0 group-hover:w-full"
+              }`} />
             </button>
           ))}
           
-          <div className="ml-4 flex items-center bg-white/5 rounded-full p-0.5 border border-white/10">
+          <div className="ml-6 flex items-center bg-black/40 rounded-lg p-1 border border-white/10">
             <button
               onClick={() => setLanguage("en")}
-              className={`px-3 py-1 rounded-full text-[10px] font-black transition-all duration-300 ${
+              className={`px-3 py-1 rounded-md text-[10px] font-black transition-all duration-300 ${
                 language === "en" 
-                  ? "bg-[#DAA520] text-black shadow-[0_0_15px_rgba(218,165,32,0.4)]" 
+                  ? "bg-[#8B0000] text-white shadow-lg" 
                   : "text-gray-500 hover:text-gray-300"
               }`}
             >
@@ -85,9 +86,9 @@ const NavBar: React.FC = () => {
             </button>
             <button
               onClick={() => setLanguage("si")}
-              className={`px-3 py-1 rounded-full text-[10px] font-black transition-all duration-300 ${
+              className={`px-3 py-1 rounded-md text-[10px] font-black transition-all duration-300 ${
                 language === "si" 
-                  ? "bg-[#DAA520] text-black shadow-[0_0_15px_rgba(218,165,32,0.4)]" 
+                  ? "bg-[#8B0000] text-white shadow-lg" 
                   : "text-gray-500 hover:text-gray-300"
               }`}
             >
