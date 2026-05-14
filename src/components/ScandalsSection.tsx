@@ -17,7 +17,7 @@ const severityIcon: Record<string, string> = {
 
 const ScandalsSection: React.FC = () => {
   const [selected, setSelected] = useState<number>(0);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   const severityLabel: Record<string, string> = {
     critical: t("scandals.risk.critical"),
@@ -43,7 +43,11 @@ const ScandalsSection: React.FC = () => {
             <span className="text-[#FF6B6B] text-sm font-semibold uppercase tracking-widest">Section 2</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("scandals.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("scandals.heading").split(" ").slice(1).join(" ")}</span>
+            {language === "si" ? (
+              <>පාලන <span className="text-[#DAA520]">වංචා සහ කූටචාර</span></>
+            ) : (
+              <>{t("scandals.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("scandals.heading").split(" ").slice(1).join(" ")}</span></>
+            )}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("scandals.intro")}

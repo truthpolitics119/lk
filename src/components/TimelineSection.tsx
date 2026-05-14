@@ -14,7 +14,7 @@ const typeConfig: Record<string, { bg: string; border: string; dot: string; text
 
 const TimelineSection: React.FC = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <section id="timeline" className="py-20 bg-[#060606] relative">
@@ -32,7 +32,11 @@ const TimelineSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 5</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("timeline.heading").split(" ")[0]} / {t("timeline.heading").split(" ")[2]} <span className="text-[#DAA520]">{t("timeline.heading").split(" ").slice(3).join(" ")}</span>
+            {language === "si" ? (
+              <>JVP / NPP <span className="text-[#DAA520]">කාලරේඛාව</span></>
+            ) : (
+              <>{t("timeline.heading").split(" ")[0]} / {t("timeline.heading").split(" ")[2]} <span className="text-[#DAA520]">{t("timeline.heading").split(" ").slice(3).join(" ")}</span></>
+            )}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("timeline.intro")}

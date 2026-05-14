@@ -23,7 +23,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 const MinistersSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <section id="ministers" className="py-20 bg-[#0d0d00] relative">
@@ -41,7 +41,11 @@ const MinistersSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 3</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("ministers.heading").split(",")[0]},<br /><span className="text-[#DAA520]">{t("ministers.heading").split(",")[1]?.trim() || t("ministers.heading").split(" ").slice(2).join(" ")}</span>
+            {language === "si" ? (
+              <>අමාත්‍යවරුන්ගේ <span className="text-[#DAA520]">ප්‍රකාශිත වත්කම්</span></>
+            ) : (
+              <>{t("ministers.heading").split(",")[0]},<br /><span className="text-[#DAA520]">{t("ministers.heading").split(",")[1]?.trim() || t("ministers.heading").split(" ").slice(2).join(" ")}</span></>
+            )}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("ministers.intro")}

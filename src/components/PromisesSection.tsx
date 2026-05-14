@@ -5,7 +5,7 @@ import { useTranslation } from "../i18n/LanguageContext";
 
 const PromisesSection: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <section id="promises" className="py-20 bg-[#0d0000] relative">
@@ -24,7 +24,11 @@ const PromisesSection: React.FC = () => {
             <span className="text-[#FF6B6B] text-sm font-semibold uppercase tracking-widest">Section 1</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("nav.broken_promises").split(" ")[0]} <span className="text-[#DAA520]">{t("nav.broken_promises").split(" ").slice(1).join(" ")}</span>
+            {language === "si" ? (
+              <>බිඳ දැමූ <span className="text-[#DAA520]">පොරොන්දු</span></>
+            ) : (
+              <>{t("nav.broken_promises").split(" ")[0]} <span className="text-[#DAA520]">{t("nav.broken_promises").split(" ").slice(1).join(" ")}</span></>
+            )}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("promises.intro")}

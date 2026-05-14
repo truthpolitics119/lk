@@ -26,7 +26,7 @@ const HistorySection: React.FC = () => {
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
             {language === "si" ? (
-              <>ජනතා විමුක්ති පෙරමුණේ <span className="text-[#DAA520]">ප්‍රචණ්ඩ ඉතිහාසය</span></>
+              <>ජනතා විමුක්ති පෙරමුණේ <span className="text-white">ප්‍රචණ්ඩ ඉතිහාසය</span></>
             ) : (
               <>{t("history.heading").split(" ").slice(0, 2).join(" ")} <span className="text-[#DAA520]">{t("history.heading").split(" ").slice(2).join(" ")}</span></>
             )}

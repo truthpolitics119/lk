@@ -27,7 +27,7 @@ function StatCard({ stat }: { stat: typeof keyStats[0] }) {
 const StatisticsSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(

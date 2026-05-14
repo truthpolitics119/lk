@@ -4,7 +4,7 @@ import { useTranslation } from "../i18n/LanguageContext";
 
 const Hero: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Animated flag stripes overlay */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10" />
 
       {/* Main content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
@@ -45,7 +45,9 @@ const Hero: React.FC = () => {
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight">
           NPP / JVP
-          <span className="block text-[#DAA520]">{t("nav.government")}</span>
+          <span className="block text-[#DAA520]">
+            {language === "si" ? "ආණ්ඩුව" : t("nav.government")}
+          </span>
           <span className="block text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 mt-2">
             {t("site.tagline")}
           </span>
