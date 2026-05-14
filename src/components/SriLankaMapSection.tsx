@@ -192,7 +192,7 @@ const SriLankaMapSection: React.FC = () => {
 
                 {/* Colombo marker */}
                 <circle cx="185" cy="1323" r="15" fill="#DAA520" opacity="0.8" />
-                <text x="185" y="1300" textAnchor="middle" fontSize="30" fill="#DAA520">Colombo</text>
+                <text x="185" y="1300" textAnchor="middle" fontSize="30" fill="#DAA520">{t("capital.colombo").split(":")[1]?.trim() || "Colombo"}</text>
 
                 {/* Compass rose */}
                 <g transform="translate(900, 100)">

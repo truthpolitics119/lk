@@ -112,9 +112,9 @@ const PromisesSection: React.FC = () => {
         {/* IMF quote callout */}
         <div className="mt-10 bg-[#1a0505] border-l-4 border-[#DAA520] rounded-xl p-6">
           <p className="text-gray-300 italic text-lg leading-relaxed">
-            "The NPP government has largely continued the previous administration's macroeconomic policies, echoing former President Wickremesinghe's claim that 'there are no alternatives' to the IMF program."
+            {t("quote.promises")}
           </p>
-          <p className="text-[#DAA520] font-semibold mt-3 text-sm">— Harindra & Gamage, Academic Analysis, 2025</p>
+          <p className="text-[#DAA520] font-semibold mt-3 text-sm">{t("quote.attribution")}</p>
         </div>
       </div>
     </section>

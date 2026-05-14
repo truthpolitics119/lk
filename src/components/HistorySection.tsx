@@ -111,8 +111,8 @@ const HistorySection: React.FC = () => {
 
         {/* Economic Cost chart */}
         <div className="bg-[#1a0505] border border-[#3a1010] rounded-2xl p-6 mb-8">
-          <h3 className="text-white font-bold text-lg mb-1">Economic Cost to Sri Lanka — Major Conflicts</h3>
-          <p className="text-gray-500 text-xs mb-5">Estimated direct & indirect costs in USD Billion — borne by Sri Lankan taxpayers</p>
+          <h3 className="text-white font-bold text-lg mb-1">{t("history.chart_economic.title")}</h3>
+          <p className="text-gray-500 text-xs mb-5">{t("history.chart_economic.subtitle")}</p>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={insurrectionCosts}>
               <CartesianGrid strokeDasharray="3 3" stroke="#2a0505" />
@@ -137,13 +137,13 @@ const HistorySection: React.FC = () => {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
-          <p className="text-gray-500 text-xs mt-2 text-center">* JVP conflict costs are estimates based on aggregate economic research. LTTE war cost is widely cited. All borne by Sri Lankan taxpayers.</p>
+          <p className="text-gray-500 text-xs mt-2 text-center">{t("history.chart_economic.note")}</p>
         </div>
 
         {/* Death toll visualization */}
         <div className="bg-[#1a0505] border border-[#8B0000]/30 rounded-2xl p-6 mb-8">
-          <h3 className="text-white font-bold text-lg mb-1">Human Cost Comparison</h3>
-          <p className="text-gray-500 text-xs mb-5">Deaths associated with each conflict (estimated)</p>
+          <h3 className="text-white font-bold text-lg mb-1">{t("history.human_cost.title")}</h3>
+          <p className="text-gray-500 text-xs mb-5">{t("history.human_cost.subtitle")}</p>
           <div className="space-y-4">
             {insurrectionCosts.map((item, i) => {
               const maxDeaths = 100000;
@@ -154,7 +154,7 @@ const HistorySection: React.FC = () => {
                   <div className="flex justify-between items-center mb-1.5">
                     <span className="text-gray-300 text-sm">{item.conflict}</span>
                     <span className="font-bold text-sm" style={{ color: colors[i] }}>
-                      {item.deaths.toLocaleString()} lives
+                      {item.deaths.toLocaleString()} {t("history.human_cost.lives")}
                     </span>
                   </div>
                   <div className="h-6 bg-[#0d0000] rounded-full overflow-hidden">
@@ -174,16 +174,16 @@ const HistorySection: React.FC = () => {
         {/* Key quote */}
         <div className="bg-[#1a0000] border-l-4 border-[#8B0000] rounded-xl p-5 mb-6">
           <p className="text-gray-300 italic text-lg leading-relaxed">
-            "The JVP insurrections ate into the fabric of rural life. The development of enterprises and investment came to a standstill. Today, the JVP has changed its tune, but it is all a wolf in sheep's clothing!"
+            {t("history.quote1.body")}
           </p>
-          <p className="text-[#FF6B6B] font-semibold mt-3 text-sm">— Sri Lanka Economic History Research, cited sources</p>
+          <p className="text-[#FF6B6B] font-semibold mt-3 text-sm">{t("history.quote1.attribution")}</p>
         </div>
 
         <div className="bg-[#1a0000] border-l-4 border-[#DAA520] rounded-xl p-5">
           <p className="text-gray-300 italic leading-relaxed">
-            "The JVP has a history of stifling dissent; old habits are said to die hard. In the past, it relied on mindless violence, but it now appears to be using Emergency regulations to achieve the same end under the pretext of controlling errant social media activists."
+            {t("history.quote2.body")}
           </p>
-          <p className="text-[#DAA520] font-semibold mt-3 text-sm">— The Island (Sri Lanka), 2025</p>
+          <p className="text-[#DAA520] font-semibold mt-3 text-sm">{t("history.quote2.attribution")}</p>
         </div>
       </div>
     </section>

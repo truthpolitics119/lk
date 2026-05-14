@@ -109,23 +109,20 @@ const MinistersSection: React.FC = () => {
             <div className="w-12 h-12 bg-black/40 rounded-xl flex items-center justify-center border border-[#DAA520]/20 mb-4">
               <LucideIcon name="Home" size={24} className="text-[#DAA520]" />
             </div>
-            <h3 className="text-white font-bold text-lg mb-2">Minister Lal Kantha</h3>
-            <p className="text-[#DAA520] text-sm font-semibold mb-3">Agriculture Minister — Rs. 80M+ Declared Property</p>
+            <h3 className="text-white font-bold text-lg mb-2">{t("ministers.lal_kantha.title")}</h3>
+            <p className="text-[#DAA520] text-sm font-semibold mb-3">{t("ministers.lal_kantha.subtitle")}</p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Lal Kantha, who <strong className="text-white">lectures civil servants on Marxism</strong> and conducts Lenin reading rallies, 
-              owns a three-storey luxury house and properties valued at over Rs. 80 million. The controversy intensified 
-              amid the coal scam eruption and Energy Minister's resignation.
+              {t("ministers.lal_kantha.body")}
             </p>
           </div>
           <div className="bg-[#1a0505] border border-[#8B0000]/30 rounded-2xl p-5">
             <div className="w-12 h-12 bg-black/40 rounded-xl flex items-center justify-center border border-[#8B0000]/20 mb-4">
               <LucideIcon name="Scale" size={24} className="text-[#FF6B6B]" />
             </div>
-            <h3 className="text-white font-bold text-lg mb-2">CIABOC Investigation</h3>
-            <p className="text-[#FF6B6B] text-sm font-semibold mb-3">September 2025 — SJB Complaint Filed</p>
+            <h3 className="text-white font-bold text-lg mb-2">{t("ministers.ciaboc.title")}</h3>
+            <p className="text-[#FF6B6B] text-sm font-semibold mb-3">{t("ministers.ciaboc.subtitle")}</p>
             <p className="text-gray-300 text-sm leading-relaxed mb-3">
-              The SJB filed a formal complaint with Sri Lanka's Commission to Investigate Allegations of Bribery or Corruption (CIABOC) 
-              against the following NPP ministers:
+              {t("ministers.ciaboc.body")}
             </p>
             <ul className="space-y-1.5">
               {["Wasantha Samarasinghe", "Sunil Handunetti", "Bimal Rathnayake", "Dr. Nalinda Jayathissa", "Kumara Jayakody", "Deputy Min. Sunil Watagala"].map((name, i) => (
@@ -141,9 +138,9 @@ const MinistersSection: React.FC = () => {
         {/* Quote */}
         <div className="mt-8 bg-[#1a1500] border-l-4 border-[#DAA520] rounded-xl p-5">
           <p className="text-gray-300 italic leading-relaxed text-lg">
-            "With his left hand he holds the workers' hammer and peasants' sickle, while with his right he holds title to land and buildings, deposit certificates and even blue-chip cryptocurrency, and has simultaneously pole vaulted to the upper rungs of both the political and capitalist ladders."
+            {t("ministers.quote.body")}
           </p>
-          <p className="text-[#DAA520] font-semibold mt-3 text-sm">— Sri Lanka Guardian, on Wasantha Samarasinghe</p>
+          <p className="text-[#DAA520] font-semibold mt-3 text-sm">{t("ministers.quote.attribution")}</p>
         </div>
       </div>
     </section>
