@@ -5,7 +5,7 @@ import { useTranslation } from "../i18n/LanguageContext";
 const sections = [
   { id: "promises", labelKey: "nav.broken_promises" },
   { id: "scandals", labelKey: "nav.scandals" },
-  { id: "ministers", labelKey: "nav.government" },
+  { id: "ministers", labelKey: "nav.ministers" },
   { id: "statistics", labelKey: "nav.data_stats" },
   { id: "timeline", labelKey: "nav.timeline" },
   { id: "history", labelKey: "nav.lives_lost" },

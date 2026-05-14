@@ -6,7 +6,8 @@ export const translations: Record<string, any> = {
       description: "A comprehensive, data-driven examination of how the NPP/JVP came to power, their broken promises, governance scandals, violent history, and the real impact on ordinary Sri Lancans.",
     },
     nav: {
-      government: "Ministers",
+      government: "Government",
+      ministers: "Ministers",
       broken_promises: "Promises",
       scandals: "Scandals",
       vote_share_drop: "Vote Share Drop",
@@ -17,7 +18,7 @@ export const translations: Record<string, any> = {
       sources: "Sources",
     },
     cta: {
-      see_promises: "See the Broken Promises",
+      see_promises: "The Broken Promises",
       explore_scandals: "Explore Scandals",
       view_timeline: "View Timeline",
     },
@@ -579,7 +580,8 @@ export const translations: Record<string, any> = {
       description: "NPP/JVP බලයට පැමිණි ආකාරය, ඔවුන් විසින් බිඳ දැමූ පොරොන්දු, පාලන වංචා සහ ගැටළු, අතීතයේ සිදුකළ හින්සාත්මක ඉතිහාසය, සහ සාමාන්‍ය ශ්‍රී ලාංකික ජනතාවට එයින් ඇති වූ සැබෑ බලපෑම පිළිබඳ දත්ත මත පදනම් වූ සම්පූර්ණ විමර්ශනයක්.",
     },
     nav: {
-      government: "ඇමතිවරු",
+      government: "ආණ්ඩුව",
+      ministers: "ඇමතිවරු",
       broken_promises: "පොරොන්දු",
       scandals: "අක්‍රමිකතා",
       vote_share_drop: "ඡන්ද ප්‍රතිශතයේ පසුබැසීම",
@@ -590,9 +592,9 @@ export const translations: Record<string, any> = {
       sources: "මූලාශ්‍ර",
     },
     cta: {
-      see_promises: "බිඳවැටුණු පොරොන්දු බලන්න",
-      explore_scandals: "වංචා සහ ගැටළු සොයන්න",
-      view_timeline: "කාලරේඛාව නරඹන්න",
+      see_promises: "බිඳවැටුණු පොරොන්දු",
+      explore_scandals: "වංචා සහ ගැටළු",
+      view_timeline: "JVP/NPP කාලරේඛාව",
     },
     history: {
       heading: "ජනතා විමුක්ති පෙරමුණේ ප්‍රචණ්ඩ ඉතිහාසය",
