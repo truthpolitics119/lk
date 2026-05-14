@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#050505]" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div className="min-h-screen bg-[#050505]">
       <NavBar />
       <Hero />
       <PromisesSection />

@@ -1,6 +1,7 @@
 export const promises = [
   {
     id: 1,
+    translationKey: "imf",
     title: "Renegotiate IMF Agreement",
     promised: "Save Sri Lanka from the 'IMF death trap' and renegotiate the agreement",
     reality: "Continued unquestioning adherence to IMF-imposed austerity. Zero renegotiation attempted.",
@@ -9,6 +10,7 @@ export const promises = [
   },
   {
     id: 2,
+    translationKey: "tax",
     title: "Reduce Tax Burden",
     promised: "Remove taxes on food, medicine, and essentials",
     reality: "VAT rose from 8% to 20%. Exemptions on essentials removed. World Bank called reforms 'particularly regressive.'",
@@ -17,6 +19,7 @@ export const promises = [
   },
   {
     id: 3,
+    translationKey: "salary",
     title: "25% Salary Increase",
     promised: "Increase public servant salaries by 25% immediately and every six months",
     reality: "Only 8,250 rupees increase over 3 years for lowest grade. Overtime payments and allowances slashed.",
@@ -25,6 +28,7 @@ export const promises = [
   },
   {
     id: 4,
+    translationKey: "develop",
     title: "Develop Country in 6 Months",
     promised: "Achieve a wealthy country and comfortable life",
     reality: "Economic output still below 2018 levels. 24.5% poverty rate — double pre-pandemic levels.",
@@ -33,6 +37,7 @@ export const promises = [
   },
   {
     id: 5,
+    translationKey: "privatise",
     title: "Stop Privatization",
     promised: "Stop the privatization of the Electricity Board",
     reality: "Proposed State Holding Company to restructure 400+ SOEs, paving way for privatizations, destroying 500,000 jobs.",
@@ -41,6 +46,7 @@ export const promises = [
   },
   {
     id: 6,
+    translationKey: "easter",
     title: "Easter Attack Justice",
     promised: "Provide justice for victims of the Easter attacks",
     reality: "No publicly available information on any steps taken. No prosecution plan implemented.",
@@ -49,6 +55,7 @@ export const promises = [
   },
   {
     id: 7,
+    translationKey: "pta",
     title: "Repeal PTA",
     promised: "Repeal the Prevention of Terrorism Act",
     reality: "Continued using the law while seeking to replace it with a similarly draconian alternative.",
@@ -57,6 +64,7 @@ export const promises = [
   },
   {
     id: 8,
+    translationKey: "elections",
     title: "Provincial Council Elections",
     promised: "Hold Provincial Council Elections",
     reality: "Remains unfulfilled. Key campaign promise abandoned after gaining power.",
@@ -68,6 +76,7 @@ export const promises = [
 export const scandals = [
   {
     id: 1,
+    translationKey: "coal",
     title: "Coal Procurement Fraud",
     subtitle: "Norochcholai Coal Scandal",
     severity: "critical",
@@ -85,6 +94,7 @@ export const scandals = [
   },
   {
     id: 2,
+    translationKey: "treasury",
     title: "$2.5 Million Treasury Heist",
     subtitle: "Cybercrime & Negligence",
     severity: "critical",
@@ -102,6 +112,7 @@ export const scandals = [
   },
   {
     id: 3,
+    translationKey: "wealth",
     title: "Minister Wealth Scandal",
     subtitle: "Rs. 275 Million 'Marxist' Ministers",
     severity: "high",
@@ -119,6 +130,7 @@ export const scandals = [
   },
   {
     id: 4,
+    translationKey: "education",
     title: "Education Module Scandal",
     subtitle: "Inappropriate Content in Schools",
     severity: "medium",
@@ -135,6 +147,7 @@ export const scandals = [
   },
   {
     id: 5,
+    translationKey: "appt",
     title: "Political Appointments Scandal",
     subtitle: "Loyalty Over Competence",
     severity: "high",
@@ -152,6 +165,7 @@ export const scandals = [
   },
   {
     id: 6,
+    translationKey: "health",
     title: "Health Spending Cuts",
     subtitle: "Hospitals & Medicine Shortages",
     severity: "high",
@@ -212,6 +226,7 @@ export const economicComparison = [
 export const jvpTimeline = [
   {
     year: "1965",
+    translationKey: "founded",
     event: "JVP Founded",
     description: "Rohana Wijeweera founds the Janatha Vimukthi Peramuna as a Marxist-Leninist movement",
     type: "founding",
@@ -219,6 +234,7 @@ export const jvpTimeline = [
   },
   {
     year: "1971",
+    translationKey: "first_insurrection",
     event: "First Armed Insurrection",
     description: "JVP launches armed uprising against PM Sirimavo Bandaranaike's government. ~5,000 lives lost. Economy of rural areas devastated.",
     type: "violence",
@@ -226,6 +242,7 @@ export const jvpTimeline = [
   },
   {
     year: "1971–1977",
+    translationKey: "proscription",
     event: "Proscription & Imprisonment",
     description: "JVP banned, leaders imprisoned following failed insurrection",
     type: "suppression",
@@ -233,6 +250,7 @@ export const jvpTimeline = [
   },
   {
     year: "1983",
+    translationKey: "re_enters",
     event: "Re-enters Politics",
     description: "JVP re-enters mainstream democratic politics after lifting of ban",
     type: "political",
@@ -240,6 +258,7 @@ export const jvpTimeline = [
   },
   {
     year: "1987–1989",
+    translationKey: "second_insurrection",
     event: "Second Armed Insurrection",
     description: "Second uprising against Indo-Sri Lanka Accord. ~60,000 people killed extrajudicially. Country paralyzed for 3 years by enforced hartals.",
     type: "violence",
@@ -247,6 +266,7 @@ export const jvpTimeline = [
   },
   {
     year: "1989",
+    translationKey: "leadership_eliminated",
     event: "Leadership Eliminated",
     description: "Rohana Wijeweera and most JVP leaders killed. JVP decimated but survives.",
     type: "suppression",
@@ -254,6 +274,7 @@ export const jvpTimeline = [
   },
   {
     year: "1994",
+    translationKey: "electoral",
     event: "Electoral Politics",
     description: "JVP commits to parliamentary democracy, abandons revolutionary path",
     type: "political",
@@ -261,6 +282,7 @@ export const jvpTimeline = [
   },
   {
     year: "2004–2005",
+    translationKey: "coalition",
     event: "Government Coalition",
     description: "JVP joins UPFA government coalition under Mahinda Rajapaksa",
     type: "political",
@@ -268,6 +290,7 @@ export const jvpTimeline = [
   },
   {
     year: "2019",
+    translationKey: "npp_formed",
     event: "NPP Alliance Formed",
     description: "JVP forms National People's Power (NPP) coalition to broaden appeal beyond traditional base",
     type: "political",
@@ -275,6 +298,7 @@ export const jvpTimeline = [
   },
   {
     year: "2022",
+    translationKey: "aragalaya",
     event: "Aragalaya Protest Wave",
     description: "Sri Lanka economic collapse. Mass protests force President Gotabaya Rajapaksa to resign. NPP rides anti-establishment wave.",
     type: "political",
@@ -282,6 +306,7 @@ export const jvpTimeline = [
   },
   {
     year: "Sept 2024",
+    translationKey: "presidential_win",
     event: "Presidential Victory",
     description: "AKD wins presidency with 42.3% of vote — first time without 50% majority requiring second preference counting",
     type: "victory",
@@ -289,6 +314,7 @@ export const jvpTimeline = [
   },
   {
     year: "Nov 2024",
+    translationKey: "supermajority",
     event: "Parliamentary Supermajority",
     description: "NPP wins 159 seats — absolute majority. Promises 'system change', anti-corruption, economic relief.",
     type: "victory",
@@ -296,6 +322,7 @@ export const jvpTimeline = [
   },
   {
     year: "2025",
+    translationKey: "scandals",
     event: "Scandals Erupt",
     description: "Coal fraud, Treasury heist, minister wealth scandals, media suppression, vote share collapses 34%",
     type: "scandal",
@@ -303,6 +330,7 @@ export const jvpTimeline = [
   },
   {
     year: "2026",
+    translationKey: "crisis",
     event: "Credibility Crisis",
     description: "Coal NAO report, No-Confidence motion defeated by parliamentary steamroller, UNHRC human rights report released",
     type: "scandal",
@@ -311,14 +339,14 @@ export const jvpTimeline = [
 ];
 
 export const keyStats = [
-  { label: "Lives Lost — 1971 Uprising", value: "5,000+", icon: "Skull", color: "#8B0000" },
-  { label: "Lives Lost — 1987-89 Uprising", value: "60,000+", icon: "Skull", color: "#8B0000" },
-  { label: "Treasury Heist", value: "$2.5M", icon: "Laptop", color: "#B8860B" },
-  { label: "Vote Share Dropped in 6 months", value: "34%", icon: "TrendingDown", color: "#8B0000" },
-  { label: "Poverty Rate (2024)", value: "24.5%", icon: "Frown", color: "#8B4513" },
-  { label: "VAT Rate (from 8% to)", value: "20%", icon: "BarChart3", color: "#8B0000" },
-  { label: "Minister's Wealth (Samarasinghe)", value: "Rs.275M", icon: "Home", color: "#B8860B" },
-  { label: "Health Budget Cut", value: "Rs.27B", icon: "Hospital", color: "#8B0000" },
+  { translationKey: "lives_1971", label: "Lives Lost — 1971 Uprising", value: "5,000+", icon: "Skull", color: "#8B0000" },
+  { translationKey: "lives_1989", label: "Lives Lost — 1987-89 Uprising", value: "60,000+", icon: "Skull", color: "#8B0000" },
+  { translationKey: "treasury_heist", label: "Treasury Heist", value: "$2.5M", icon: "Laptop", color: "#B8860B" },
+  { translationKey: "vote_share", label: "Vote Share Dropped in 6 months", value: "34%", icon: "TrendingDown", color: "#8B0000" },
+  { translationKey: "poverty_rate", label: "Poverty Rate (2024)", value: "24.5%", icon: "Frown", color: "#8B4513" },
+  { translationKey: "vat_rate", label: "VAT Rate (from 8% to)", value: "20%", icon: "BarChart3", color: "#8B0000" },
+  { translationKey: "minister_wealth", label: "Minister's Wealth (Samarasinghe)", value: "Rs.275M", icon: "Home", color: "#B8860B" },
+  { translationKey: "health_cut", label: "Health Budget Cut", value: "Rs.27B", icon: "Hospital", color: "#8B0000" },
 ];
 
 export const localElectionData = [

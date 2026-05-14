@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useTranslation } from "../i18n/LanguageContext";
+import LucideIcon from "./LucideIcon";
 
 type Province = {
   id: string;
@@ -113,6 +115,7 @@ const provinces: Province[] = [
 const SriLankaMapSection: React.FC = () => {
   const [selected, setSelected] = useState<Province | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
+  const { t } = useTranslation();
 
   return (
     <section className="py-20 bg-[#0a0a0a] relative">
@@ -130,10 +133,10 @@ const SriLankaMapSection: React.FC = () => {
             <span className="text-[#4CAF50] text-sm font-semibold uppercase tracking-widest">Interactive Map</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            Impact Across <span className="text-[#DAA520]">Sri Lanka</span>
+            {t("map.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("map.heading").split(" ").slice(1).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Click on any province to see how NPP governance has affected communities across the island.
+            {t("map.instruction")}
           </p>
         </div>
 
@@ -181,7 +184,7 @@ const SriLankaMapSection: React.FC = () => {
                         className="pointer-events-none select-none"
                         fontWeight={isSelected ? "bold" : "normal"}
                       >
-                        {province.name.split(" ")[0]}
+                        {t(`province_data.${province.id}.name`).split(" ")[0]}
                       </text>
                     </g>
                   );
@@ -209,8 +212,8 @@ const SriLankaMapSection: React.FC = () => {
                     📍
                   </div>
                   <div>
-                    <h3 className="text-white font-black text-xl">{selected.name}</h3>
-                    <p className="text-[#DAA520] text-sm">Capital: {selected.capital}</p>
+                    <h3 className="text-white font-black text-xl">{t(`province_data.${selected.id}.name`)}</h3>
+                    <p className="text-[#DAA520] text-sm">{t(`province_data.${selected.id}.capital`)}</p>
                   </div>
                   <button
                     onClick={() => setSelected(null)}
@@ -222,19 +225,19 @@ const SriLankaMapSection: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="bg-[#0d0000] border border-[#4682B4]/30 rounded-xl p-4">
-                    <div className="text-[#87CEEB] text-xs font-bold uppercase mb-1">🗳️ NPP Election Result</div>
-                    <p className="text-gray-300 text-sm">{selected.nppResult}</p>
+                    <div className="text-[#87CEEB] text-xs font-bold uppercase mb-1">🗳️ {t("map.election_result")}</div>
+                    <p className="text-gray-300 text-sm">{t(`province_data.${selected.id}.nppResult`)}</p>
                   </div>
 
                   <div className="bg-[#0d0000] border border-[#8B0000]/30 rounded-xl p-4">
-                    <div className="text-[#FF6B6B] text-xs font-bold uppercase mb-1">😔 Poverty Impact</div>
-                    <p className="text-gray-300 text-sm">{selected.povertyNote}</p>
+                    <div className="text-[#FF6B6B] text-xs font-bold uppercase mb-1">😔 {t("map.poverty_impact")}</div>
+                    <p className="text-gray-300 text-sm">{t(`province_data.${selected.id}.povertyNote`)}</p>
                   </div>
 
-                  {selected.scandal && (
+                  {t(`province_data.${selected.id}.scandal`) !== `province_data.${selected.id}.scandal` && (
                     <div className="bg-[#0d0000] border border-[#DAA520]/30 rounded-xl p-4">
-                      <div className="text-[#DAA520] text-xs font-bold uppercase mb-1">⚠️ Scandal / Issue</div>
-                      <p className="text-gray-300 text-sm">{selected.scandal}</p>
+                      <div className="text-[#DAA520] text-xs font-bold uppercase mb-1">⚠️ {t("map.scandal_issue")}</div>
+                      <p className="text-gray-300 text-sm">{t(`province_data.${selected.id}.scandal`)}</p>
                     </div>
                   )}
                 </div>
@@ -242,26 +245,28 @@ const SriLankaMapSection: React.FC = () => {
             ) : (
               <div className="space-y-4">
                 <div className="bg-[#111] border border-[#2a2a2a] rounded-2xl p-5">
-                  <h3 className="text-white font-bold text-lg mb-3">Key Regional Facts</h3>
+                  <h3 className="text-white font-bold text-lg mb-3">{t("map.key_facts")}</h3>
                   <ul className="space-y-3">
                     {[
-                      { icon: "🏙️", text: "Western Province (Colombo) saw strong NPP urban professional support but faces VAT burden most acutely" },
-                      { icon: "🌾", text: "North Central Province: Ministers Wasantha Samarasinghe & Lal Kantha — both representing Anuradhapura — are under CIABOC investigation" },
-                      { icon: "⛵", text: "Southern Province: Historical JVP heartland. Cyclone Ditwah mishandling led to emergency powers against critics" },
-                      { icon: "🕌", text: "Eastern & Northern Provinces: Tamil and Muslim communities remain skeptical — PTA still used despite NPP pledges to repeal" },
-                      { icon: "🍵", text: "Central Province: Estate workers face real wages below pre-crisis levels despite salary promises" },
+                      { icon: "🏙️", key: "western" },
+                      { icon: "🌾", key: "north-central" },
+                      { icon: "⛵", key: "southern" },
+                      { icon: "🕌", key: "eastern" },
+                      { icon: "🍵", key: "central" },
                     ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
+                      <li key={i} className="flex items-start gap-3 cursor-pointer hover:bg-white/5 p-2 rounded-lg transition-colors" onClick={() => setSelected(provinces.find(p => p.id === item.key) || null)}>
                         <span className="text-xl flex-shrink-0">{item.icon}</span>
-                        <p className="text-gray-400 text-sm leading-relaxed">{item.text}</p>
+                        <div>
+                          <h4 className="text-white text-sm font-bold">{t(`province_data.${item.key}.name`)}</h4>
+                          <p className="text-gray-400 text-xs leading-relaxed line-clamp-1">{t(`province_data.${item.key}.povertyNote`)}</p>
+                        </div>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="bg-[#111] border border-[#DAA520]/20 rounded-xl p-4">
-                  <p className="text-[#DAA520] text-xs font-bold mb-2">👆 Click a province on the map</p>
-                  <p className="text-gray-500 text-xs">Select any province to see specific NPP governance impacts, election results, and scandals affecting that region.</p>
+                  <p className="text-[#DAA520] text-xs font-bold mb-2">👆 {t("map.instruction")}</p>
                 </div>
               </div>
             )}
@@ -269,13 +274,13 @@ const SriLankaMapSection: React.FC = () => {
             {/* National overview stats */}
             <div className="mt-5 grid grid-cols-3 gap-3">
               {[
-                { label: "Provinces", value: "9", color: "#DAA520" },
-                { label: "In Poverty", value: "24.5%", color: "#FF6B6B" },
-                { label: "Food Insecure", value: "26%", color: "#FF8C00" },
+                { labelKey: "nav.government", value: "9", color: "#DAA520" },
+                { labelKey: "chart.poverty_rate", value: "24.5%", color: "#FF6B6B" },
+                { labelKey: "chart.food_insecurity", value: "26%", color: "#FF8C00" },
               ].map((stat, i) => (
                 <div key={i} className="bg-[#111] border border-[#2a2a2a] rounded-xl p-3 text-center">
                   <div className="font-black text-lg" style={{ color: stat.color }}>{stat.value}</div>
-                  <div className="text-gray-500 text-xs">{stat.label}</div>
+                  <div className="text-gray-500 text-[10px] leading-tight">{t(stat.labelKey)}</div>
                 </div>
               ))}
             </div>

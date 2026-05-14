@@ -4,6 +4,7 @@ import {
 } from "recharts";
 import { ministersWealth } from "../data/nppData";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const wealthColors = ["#8B0000", "#B8860B", "#8B4513", "#6B0000", "#A0522D", "#800000"];
 
@@ -22,6 +23,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 const MinistersSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="ministers" className="py-20 bg-[#0d0d00] relative">
       <div className="h-1 absolute top-0 left-0 right-0 flex">
@@ -38,10 +41,10 @@ const MinistersSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 3</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            Marxist Ministers,<br /><span className="text-[#DAA520]">Capitalist Wallets</span>
+            {t("ministers.heading").split(",")[0]},<br /><span className="text-[#DAA520]">{t("ministers.heading").split(",")[1]?.trim() || t("ministers.heading").split(" ").slice(2).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            The JVP presented itself as champions of the working class for decades. Their declared wealth tells a very different story.
+            {t("ministers.intro")}
           </p>
         </div>
 
@@ -55,32 +58,27 @@ const MinistersSection: React.FC = () => {
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
-                <span className="bg-[#DAA520]/20 text-[#DAA520] text-xs font-bold px-3 py-1 rounded-full">Trade & Commerce Minister</span>
+                <span className="bg-[#DAA520]/20 text-[#DAA520] text-xs font-bold px-3 py-1 rounded-full">{t("ministers.samarasinghe.title")}</span>
                 <span className="bg-[#8B0000]/30 text-[#FF6B6B] text-xs px-2 py-1 rounded-full flex items-center gap-1.5">
-                  <LucideIcon name="ShieldAlert" size={12} /> Under CIABOC Investigation
+                  <LucideIcon name="ShieldAlert" size={12} /> {t("ministers.samarasinghe.investigation")}
                 </span>
               </div>
               <h3 className="text-white font-black text-2xl mb-1">Wasantha Samarasinghe</h3>
-              <p className="text-[#DAA520] font-semibold mb-3">Declared Wealth: <span className="text-2xl font-black text-white">Rs. 275 Million</span></p>
+              <p className="text-[#DAA520] font-semibold mb-3">{t("ministers.samarasinghe.wealth").split(":")[0]}: <span className="text-2xl font-black text-white">{t("ministers.samarasinghe.wealth").split(":")[1]}</span></p>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                A self-proclaimed Marxist trade union firebrand who spent decades fighting for workers' rights — 
-                now revealed to own commercial buildings, cryptocurrency portfolios, stock market investments, solar power units, 
-                and luxury vehicles. <span className="text-[#FF6B6B] font-semibold">While preaching Marxism publicly, he was practicing capitalism privately.</span>
+                {t("ministers.samarasinghe.body")}
               </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {[
-                  { item: "Commercial Building", value: "Rs. 150M" },
-                  { item: "3-Storey Property", value: "Rs. 75M" },
-                  { item: "Luxury House", value: "Rs. 10M" },
-                  { item: "Solar Power Units", value: "Rs. 6.5M" },
-                  { item: "Toyota Prius", value: "Rs. 15M" },
-                  { item: "Crypto + Stocks", value: "Rs. 2M+" },
-                ].map((asset, i) => (
-                  <div key={i} className="bg-[#0d0d00] border border-[#DAA520]/20 rounded-lg p-2">
-                    <div className="text-[#DAA520] font-bold text-xs">{asset.value}</div>
-                    <div className="text-gray-400 text-xs mt-0.5">{asset.item}</div>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {[1, 2, 3, 4, 5, 6].map((idx) => {
+                  const asset = t(`ministers.samarasinghe.asset${idx}`);
+                  const [item, value] = asset.split(" — ");
+                  return (
+                    <div key={idx} className="bg-[#0d0d00] border border-[#DAA520]/20 rounded-lg p-2">
+                      <div className="text-[#DAA520] font-bold text-xs">{value}</div>
+                      <div className="text-gray-400 text-xs mt-0.5">{item}</div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -88,8 +86,8 @@ const MinistersSection: React.FC = () => {
 
         {/* Bar chart: all ministers */}
         <div className="bg-[#1a1500] border border-[#3a2500] rounded-2xl p-6 mb-8">
-          <h3 className="text-white font-bold text-lg mb-2">Declared Wealth of NPP Ministers Under Investigation</h3>
-          <p className="text-gray-400 text-sm mb-5">Values in Rs. Million — all from official CIABOC asset declarations</p>
+          <h3 className="text-white font-bold text-lg mb-2">{t("ministers.chart_title")}</h3>
+          <p className="text-gray-400 text-sm mb-5">{t("ministers.chart_subtitle")}</p>
           <ResponsiveContainer width="100%" height={280}>
             <BarChart data={ministersWealth} layout="vertical">
               <CartesianGrid strokeDasharray="3 3" stroke="#2a2000" />

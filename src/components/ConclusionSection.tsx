@@ -1,41 +1,36 @@
 import React from "react";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const conclusions = [
   {
     icon: "XCircle",
-    title: "Broken Promises",
-    text: "The NPP came to power on sweeping, unrealistic promises it has systematically failed to deliver — from renegotiating the IMF deal to reducing food taxes, stopping privatization, and developing the country in six months.",
+    translationKey: "broken_promises",
     color: "#8B0000",
   },
   {
     icon: "Banknote",
-    title: "Governance Scandals",
-    text: "Coal procurement fraud (Trident Champhar Limited — NAO found the award violated tender procedures), a $2.5M Treasury cybercrime heist, education module scandal, and CIABOC probes against six senior ministers.",
+    translationKey: "scandals",
     color: "#B8860B",
   },
   {
     icon: "Theater",
-    title: "Ideological Hypocrisy",
-    text: "The JVP — declared Marxist-Leninists — now practice neoliberalism under IMF supervision while their own ministers accumulate multi-million-rupee capitalist wealth in real estate, cryptocurrency, and stock markets.",
+    translationKey: "ideology",
     color: "#8B4513",
   },
   {
     icon: "Skull",
-    title: "Violent History",
-    text: "The JVP's two armed insurrections (1971 and 1987-89) cost tens of billions of dollars, killed ~65,000+ people, devastated rural communities, and diverted decades of development spending into security and conflict response.",
+    translationKey: "violence",
     color: "#8B0000",
   },
   {
     icon: "Lock",
-    title: "Authoritarian Drift",
-    text: "The NPP is showing authoritarian tendencies: emergency powers against critics, leaving independent oversight positions vacant, manipulating local councils, and reportedly using social media brigades against constitutional officers.",
+    translationKey: "authoritarian",
     color: "#8B0000",
   },
   {
     icon: "TrendingDown",
-    title: "Declining Public Trust",
-    text: "The NPP's vote share collapsed 34% — from 6.8M to 4.5M — between November 2024 and May 2025, as broken promises, scandals, and inexperienced governance eroded the mandate they won on.",
+    translationKey: "trust",
     color: "#B8860B",
   },
 ];
@@ -60,6 +55,8 @@ const sources = [
 ];
 
 const ConclusionSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 bg-[#050505] relative">
       <div className="h-1 absolute top-0 left-0 right-0 flex">
@@ -76,10 +73,10 @@ const ConclusionSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Conclusion</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            The Verdict
+            {t("verdict.heading")}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Based on credible international and domestic sources, the following conclusions can be established.
+            {t("verdict.intro")}
           </p>
         </div>
 
@@ -93,8 +90,8 @@ const ConclusionSection: React.FC = () => {
               <div className="w-12 h-12 bg-black/40 rounded-xl flex items-center justify-center border border-white/10 mb-4">
                 <LucideIcon name={item.icon} size={24} style={{ color: item.color === "#8B0000" ? "#FF6B6B" : "#DAA520" }} />
               </div>
-              <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.text}</p>
+              <h3 className="text-white font-bold text-lg mb-2">{t(`verdict.${item.translationKey}.heading`)}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{t(`verdict.${item.translationKey}.body`)}</p>
             </div>
           ))}
         </div>

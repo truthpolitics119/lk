@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { jvpTimeline } from "../data/nppData";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const typeConfig: Record<string, { bg: string; border: string; dot: string; text: string }> = {
   founding: { bg: "#0d1f0d", border: "#006400", dot: "#4CAF50", text: "#4CAF50" },
@@ -13,6 +14,7 @@ const typeConfig: Record<string, { bg: string; border: string; dot: string; text
 
 const TimelineSection: React.FC = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   return (
     <section id="timeline" className="py-20 bg-[#060606] relative">
@@ -30,10 +32,10 @@ const TimelineSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 5</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            JVP / NPP <span className="text-[#DAA520]">Timeline</span>
+            {t("timeline.heading").split(" ")[0]} / {t("timeline.heading").split(" ")[2]} <span className="text-[#DAA520]">{t("timeline.heading").split(" ").slice(3).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            From Marxist armed insurrection to parliamentary power — a 60-year journey of transformation, violence, and political reinvention.
+            {t("timeline.intro")}
           </p>
         </div>
 
@@ -42,7 +44,7 @@ const TimelineSection: React.FC = () => {
           {Object.entries(typeConfig).map(([type, cfg]) => (
             <div key={type} className="flex items-center gap-1.5 text-xs">
               <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: cfg.dot }} />
-              <span className="capitalize" style={{ color: cfg.text }}>{type}</span>
+              <span className="capitalize" style={{ color: cfg.text }}>{t(`timeline.tag.${type}`)}</span>
             </div>
           ))}
         </div>
@@ -84,11 +86,11 @@ const TimelineSection: React.FC = () => {
                           {event.year}
                         </span>
                         <span className="text-gray-500 text-[10px] capitalize border rounded-full px-2 py-0.5" style={{ borderColor: cfg.border, color: cfg.text }}>
-                          {event.type}
+                          {t(`timeline.tag.${event.type}`)}
                         </span>
                       </div>
-                      <h3 className="text-white font-bold text-base mb-1">{event.event}</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
+                      <h3 className="text-white font-bold text-base mb-1">{t(`timeline_events.${event.translationKey}.title`)}</h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">{t(`timeline_events.${event.translationKey}.body`)}</p>
                     </div>
                   </div>
 

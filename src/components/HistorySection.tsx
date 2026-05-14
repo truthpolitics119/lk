@@ -4,8 +4,11 @@ import {
 } from "recharts";
 import { insurrectionCosts } from "../data/nppData";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const HistorySection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="history" className="py-20 bg-[#0a0000] relative">
       <div className="h-1 absolute top-0 left-0 right-0 flex">
@@ -22,10 +25,10 @@ const HistorySection: React.FC = () => {
             <span className="text-[#FF6B6B] text-sm font-semibold uppercase tracking-widest">Section 6</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            The JVP's <span className="text-[#8B0000]">Violent History</span>
+            {t("history.heading").split(" ")[0]} <span className="text-[#8B0000]">{t("history.heading").split(" ").slice(1).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Before becoming a parliamentary party, the JVP conducted two bloody armed insurrections that killed tens of thousands and devastated Sri Lanka's economy.
+            {t("history.intro")}
           </p>
         </div>
 
@@ -39,14 +42,14 @@ const HistorySection: React.FC = () => {
                   <LucideIcon name="Flame" size={28} className="text-[#FF4444]" />
                 </div>
                 <div>
-                  <div className="text-[#FF6B6B] text-xs font-bold uppercase tracking-wider">First Insurrection</div>
-                  <h3 className="text-white font-black text-2xl">1971 Uprising</h3>
+                  <div className="text-[#FF6B6B] text-xs font-bold uppercase tracking-wider">{t("history.first_insurrection.title")}</div>
+                  <h3 className="text-white font-black text-2xl">{t("history.first_insurrection.year")}</h3>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="bg-[#8B0000]/40 rounded-xl p-3 text-center flex-1">
                   <div className="text-2xl font-black text-[#FF6B6B]">~5,000</div>
-                  <div className="text-gray-400 text-xs">Lives Lost</div>
+                  <div className="text-gray-400 text-xs">{t("stats.lives_1971").split("—")[1].trim()}</div>
                 </div>
                 <div className="bg-[#8B0000]/40 rounded-xl p-3 text-center flex-1">
                   <div className="text-2xl font-black text-[#FF6B6B]">2 months</div>
@@ -56,19 +59,12 @@ const HistorySection: React.FC = () => {
             </div>
             <div className="p-5">
               <ul className="space-y-3">
-                {[
-                  "Began April 5, 1971 — against PM Sirimavo Bandaranaike's government",
-                  "JVP insurgents held towns and rural areas for several weeks",
-                  "Suppressed with international military support",
-                  "Devastated the rural economy of Sri Lanka",
-                  "JVP leader Rohana Wijeweera imprisoned",
-                  "Mass arrests of thousands of young people",
-                ].map((point, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
+                {[1, 2, 3, 4, 5, 6].map((idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
                     <span className="text-[#FF4444] mt-0.5 flex-shrink-0">
-                      <LucideIcon name="ChevronsRight" size={14} />
+                      <LucideIcon name="ChevronsRight" size="14" />
                     </span>
-                    <span className="text-gray-300 text-sm">{point}</span>
+                    <span className="text-gray-300 text-sm">{t(`history.first_insurrection.point${idx}`)}</span>
                   </li>
                 ))}
               </ul>
@@ -83,14 +79,14 @@ const HistorySection: React.FC = () => {
                   <LucideIcon name="Skull" size={28} className="text-[#FF4444]" />
                 </div>
                 <div>
-                  <div className="text-[#FF4444] text-xs font-bold uppercase tracking-wider">Second Insurrection — Far Deadlier</div>
-                  <h3 className="text-white font-black text-2xl">1987–1989 Uprising</h3>
+                  <div className="text-[#FF4444] text-xs font-bold uppercase tracking-wider">{t("history.second_insurrection.title")}</div>
+                  <h3 className="text-white font-black text-2xl">{t("history.second_insurrection.year")}</h3>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="bg-[#8B0000]/60 rounded-xl p-3 text-center flex-1">
                   <div className="text-2xl font-black text-[#FF4444]">~60,000</div>
-                  <div className="text-gray-400 text-xs">Extrajudicial Killings</div>
+                  <div className="text-gray-400 text-xs">{t("stats.lives_1989").split("—")[1].trim()}</div>
                 </div>
                 <div className="bg-[#8B0000]/60 rounded-xl p-3 text-center flex-1">
                   <div className="text-2xl font-black text-[#FF4444]">3 years</div>
@@ -100,19 +96,12 @@ const HistorySection: React.FC = () => {
             </div>
             <div className="p-5">
               <ul className="space-y-3">
-                {[
-                  "Launched against the Indo-Sri Lanka Peace Accord (1987)",
-                  "JVP resorted to assassinations, raids, and attacks on civilian targets",
-                  "Country paralyzed by violently enforced general strikes (hartals) for 3 years",
-                  "Exploited Sinhalese nationalist sentiment against Indian IPKF",
-                  "Most JVP leaders including Rohana Wijeweera extrajudicially executed (1989)",
-                  "Development, investment, and rural enterprises came to a standstill",
-                ].map((point, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <span className="text-[#FF0000] mt-0.5 flex-shrink-0">
-                      <LucideIcon name="ChevronsRight" size={14} />
+                {[1, 2, 3, 4, 5, 6].map((idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <span className="text-[#FF4444] mt-0.5 flex-shrink-0">
+                      <LucideIcon name="ChevronsRight" size="14" />
                     </span>
-                    <span className="text-gray-300 text-sm">{point}</span>
+                    <span className="text-gray-300 text-sm">{t(`history.second_insurrection.point${idx}`)}</span>
                   </li>
                 ))}
               </ul>

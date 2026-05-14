@@ -1,7 +1,10 @@
 import React from "react";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-[#030303] border-t border-[#1a1a1a] py-8">
       <div className="max-w-7xl mx-auto px-4">
@@ -14,17 +17,17 @@ const Footer: React.FC = () => {
               <div className="w-3 h-8 bg-[#006400] rounded-sm" />
             </div>
             <div>
-              <div className="text-white font-bold text-sm">NPP Truth Record</div>
+              <div className="text-white font-bold text-sm">{t("site.title")}</div>
               <div className="text-gray-500 text-xs">Sri Lanka Political Accountability</div>
             </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-gray-600 text-xs">
-              Compiled from: International Crisis Group · JURIST · HRW · World Bank · UNDP · UNHRC · CPA · The Diplomat
+          <div className="text-center max-w-xl">
+            <p className="text-gray-600 text-xs mb-2">
+              {t("disclaimer.body")}
             </p>
-            <p className="text-gray-700 text-xs mt-1">
-              For research and public interest documentation purposes. All data from named, verifiable sources.
+            <p className="text-gray-700 text-[10px]">
+              Compiled from: International Crisis Group · JURIST · HRW · World Bank · UNDP · UNHRC · CPA · The Diplomat
             </p>
           </div>
 

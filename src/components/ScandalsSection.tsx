@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { scandals } from "../data/nppData";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const severityColor: Record<string, string> = {
   critical: "#8B0000",
@@ -14,14 +15,15 @@ const severityIcon: Record<string, string> = {
   medium: "Info",
 };
 
-const severityLabel: Record<string, string> = {
-  critical: "CRITICAL",
-  high: "HIGH",
-  medium: "MEDIUM",
-};
-
 const ScandalsSection: React.FC = () => {
   const [selected, setSelected] = useState<number>(0);
+  const { t } = useTranslation();
+
+  const severityLabel: Record<string, string> = {
+    critical: t("scandals.risk.critical"),
+    high: t("scandals.risk.high"),
+    medium: t("scandals.risk.medium"),
+  };
 
   const scandal = scandals[selected];
 
@@ -41,10 +43,10 @@ const ScandalsSection: React.FC = () => {
             <span className="text-[#FF6B6B] text-sm font-semibold uppercase tracking-widest">Section 2</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            Governance <span className="text-[#DAA520]">Scandals</span>
+            {t("scandals.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("scandals.heading").split(" ").slice(1).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            From a $2.5 million Treasury heist to coal fraud — the government that promised clean governance.
+            {t("scandals.intro")}
           </p>
         </div>
 
@@ -76,8 +78,8 @@ const ScandalsSection: React.FC = () => {
                       </span>
                       <span className="text-gray-500 text-[10px]">{s.date}</span>
                     </div>
-                    <h3 className="text-white font-bold text-sm truncate">{s.title}</h3>
-                    <p className="text-gray-400 text-xs mt-0.5">{s.subtitle}</p>
+                    <h3 className="text-white font-bold text-sm truncate">{t(`scandal.${s.translationKey}.title`)}</h3>
+                    <p className="text-gray-400 text-xs mt-0.5">{t(`scandal.${s.translationKey}.subtitle`)}</p>
                   </div>
                 </div>
               </button>
@@ -109,8 +111,8 @@ const ScandalsSection: React.FC = () => {
                         <LucideIcon name="Calendar" size={14} /> {scandal.date}
                       </span>
                     </div>
-                    <h3 className="text-white font-black text-2xl mb-1">{scandal.title}</h3>
-                    <p className="text-[#DAA520] font-semibold text-sm">{scandal.subtitle}</p>
+                    <h3 className="text-white font-black text-2xl mb-1">{t(`scandal.${scandal.translationKey}.title`)}</h3>
+                    <p className="text-[#DAA520] font-semibold text-sm">{t(`scandal.${scandal.translationKey}.subtitle`)}</p>
                   </div>
                 </div>
               </div>
@@ -118,20 +120,25 @@ const ScandalsSection: React.FC = () => {
               <div className="p-6">
                 {/* Summary */}
                 <div className="bg-[#0d0500] rounded-xl p-4 mb-5 border-l-4 border-[#DAA520]">
-                  <p className="text-gray-300 leading-relaxed">{scandal.summary}</p>
+                  <p className="text-gray-300 leading-relaxed">{t(`scandal.${scandal.translationKey}.body`)}</p>
                 </div>
 
                 {/* Key findings */}
-                <h4 className="text-[#DAA520] font-bold text-sm uppercase tracking-wider mb-3">Key Findings:</h4>
+                <h4 className="text-[#DAA520] font-bold text-sm uppercase tracking-wider mb-3">{t("scandals.key_findings")}</h4>
                 <ul className="space-y-3">
-                  {scandal.details.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-[#8B0000]/40 border border-[#8B0000]/60 rounded-full flex items-center justify-center text-[#FF6B6B] text-xs font-bold mt-0.5">
-                        {i + 1}
-                      </span>
-                      <p className="text-gray-300 text-sm leading-relaxed">{detail}</p>
-                    </li>
-                  ))}
+                  {[1, 2, 3, 4, 5].map((idx) => {
+                    const key = `scandal.${scandal.translationKey}.finding${idx}`;
+                    const translated = t(key);
+                    if (translated === key) return null;
+                    return (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="flex-shrink-0 w-6 h-6 bg-[#8B0000]/40 border border-[#8B0000]/60 rounded-full flex items-center justify-center text-[#FF6B6B] text-xs font-bold mt-0.5">
+                          {idx}
+                        </span>
+                        <p className="text-gray-300 text-sm leading-relaxed">{translated}</p>
+                      </li>
+                    );
+                  })}
                 </ul>
 
                 {/* Hypocrisy callout */}
@@ -139,7 +146,7 @@ const ScandalsSection: React.FC = () => {
                   <p className="text-gray-400 text-xs italic flex items-start gap-2">
                     <LucideIcon name="AlertTriangle" size={14} className="text-[#FF6B6B] mt-0.5 flex-shrink-0" />
                     <span>
-                      <strong className="text-[#FF6B6B]">Note:</strong> These are the actions of a government that campaigned on an anti-corruption, clean governance platform — branding itself as fundamentally different from the corrupt political establishment it replaced.
+                      <strong className="text-[#FF6B6B]">{t("scandals.note")}:</strong> {t(`scandal.${scandal.translationKey}.note`)}
                     </span>
                   </p>
                 </div>

@@ -5,8 +5,10 @@ import {
 } from "recharts";
 import { povertyData, vatData, voteShareData, localElectionData, economicComparison, keyStats } from "../data/nppData";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 function StatCard({ stat }: { stat: typeof keyStats[0] }) {
+  const { t } = useTranslation();
   return (
     <div
       className="bg-[#1a0505] border border-[#3a1010] rounded-2xl p-5 flex flex-col items-center text-center hover:border-[#8B0000]/60 transition-all duration-300 group"
@@ -17,7 +19,7 @@ function StatCard({ stat }: { stat: typeof keyStats[0] }) {
       <div className="text-2xl md:text-3xl font-black mb-1" style={{ color: stat.color === "#8B0000" ? "#FF6B6B" : "#DAA520" }}>
         {stat.value}
       </div>
-      <div className="text-gray-400 text-xs leading-tight">{stat.label}</div>
+      <div className="text-gray-400 text-xs leading-tight">{t(`stats.${stat.translationKey}`)}</div>
     </div>
   );
 }
@@ -25,6 +27,7 @@ function StatCard({ stat }: { stat: typeof keyStats[0] }) {
 const StatisticsSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,10 +56,10 @@ const StatisticsSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 4</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            Data & <span className="text-[#DAA520]">Statistics</span>
+            {t("stats.heading").split("&")[0]} & <span className="text-[#DAA520]">{t("stats.heading").split("&")[1]?.trim() || t("stats.heading").split(" ").slice(1).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Hard numbers from the World Bank, IMF, UNDP, and Sri Lankan government data — painting the real picture.
+            {t("stats.intro")}
           </p>
         </div>
 
@@ -71,7 +74,7 @@ const StatisticsSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           {/* Poverty chart */}
           <div className="bg-[#1a0505] border border-[#3a1010] rounded-2xl p-5">
-            <h3 className="text-white font-bold text-base mb-1">Poverty & Food Insecurity Rate (%)</h3>
+            <h3 className="text-white font-bold text-base mb-1">{t("stats.poverty_food_heading")}</h3>
             <p className="text-gray-500 text-xs mb-4">2019–2024 — World Bank & UNDP Data</p>
             <ResponsiveContainer width="100%" height={220}>
               <AreaChart data={povertyData}>
@@ -89,22 +92,22 @@ const StatisticsSection: React.FC = () => {
                 <XAxis dataKey="year" stroke="#555" tick={{ fill: "#888", fontSize: 11 }} />
                 <YAxis stroke="#555" tick={{ fill: "#888", fontSize: 11 }} tickFormatter={(v) => `${v}%`} />
                 <Tooltip contentStyle={{ background: "#1a0505", border: "1px solid #8B0000", borderRadius: "8px" }} labelStyle={{ color: "#fff" }} itemStyle={{ color: "#DAA520" }} />
-                <Area type="monotone" dataKey="poverty" name="Poverty Rate" stroke="#FF4444" fill="url(#povertyGrad)" strokeWidth={2.5} dot={{ fill: "#FF4444", r: 4 }} />
-                <Area type="monotone" dataKey="food_insecurity" name="Food Insecurity" stroke="#DAA520" fill="url(#foodGrad)" strokeWidth={2} dot={{ fill: "#DAA520", r: 3 }} />
+                <Area type="monotone" dataKey="poverty" name={t("chart.poverty_rate")} stroke="#FF4444" fill="url(#povertyGrad)" strokeWidth={2.5} dot={{ fill: "#FF4444", r: 4 }} />
+                <Area type="monotone" dataKey="food_insecurity" name={t("chart.food_insecurity")} stroke="#DAA520" fill="url(#foodGrad)" strokeWidth={2} dot={{ fill: "#DAA520", r: 3 }} />
               </AreaChart>
             </ResponsiveContainer>
             <div className="mt-2 flex items-center gap-4 text-xs">
-              <span className="flex items-center gap-1"><span className="w-3 h-0.5 bg-[#FF4444] inline-block" /> Poverty Rate</span>
-              <span className="flex items-center gap-1 text-gray-400"><span className="w-3 h-0.5 bg-[#DAA520] inline-block" /> Food Insecurity</span>
+              <span className="flex items-center gap-1"><span className="w-3 h-0.5 bg-[#FF4444] inline-block" /> {t("chart.poverty_rate")}</span>
+              <span className="flex items-center gap-1 text-gray-400"><span className="w-3 h-0.5 bg-[#DAA520] inline-block" /> {t("chart.food_insecurity")}</span>
             </div>
             <div className="mt-3 bg-[#8B0000]/20 rounded-lg p-2">
-              <p className="text-[#FF6B6B] text-xs">⚠️ Poverty doubled from ~12% to 24.5% — back to early 2000s levels</p>
+              <p className="text-[#FF6B6B] text-xs">⚠️ {t("stats.poverty_doubled")}</p>
             </div>
           </div>
 
           {/* VAT chart */}
           <div className="bg-[#1a1500] border border-[#3a2500] rounded-2xl p-5">
-            <h3 className="text-white font-bold text-base mb-1">VAT Rate Trajectory (%)</h3>
+            <h3 className="text-white font-bold text-base mb-1">{t("stats.vat_trajectory")}</h3>
             <p className="text-gray-500 text-xs mb-4">2019–2024 — Sri Lanka Revenue Authority Data</p>
             <ResponsiveContainer width="100%" height={220}>
               <BarChart data={vatData}>
@@ -112,7 +115,7 @@ const StatisticsSection: React.FC = () => {
                 <XAxis dataKey="year" stroke="#555" tick={{ fill: "#888", fontSize: 11 }} />
                 <YAxis stroke="#555" tick={{ fill: "#888", fontSize: 11 }} tickFormatter={(v) => `${v}%`} domain={[0, 25]} />
                 <Tooltip contentStyle={{ background: "#1a1500", border: "1px solid #DAA520", borderRadius: "8px" }} labelStyle={{ color: "#fff" }} itemStyle={{ color: "#DAA520" }} />
-                <Bar dataKey="vat" name="VAT Rate %" radius={[4, 4, 0, 0]}>
+                <Bar dataKey="vat" name={t("chart.vat_rate")} radius={[4, 4, 0, 0]}>
                   {vatData.map((entry, i) => (
                     <Cell key={i} fill={entry.vat >= 18 ? "#8B0000" : entry.vat >= 12 ? "#B8860B" : "#006400"} />
                   ))}
@@ -120,7 +123,7 @@ const StatisticsSection: React.FC = () => {
               </BarChart>
             </ResponsiveContainer>
             <div className="mt-3 bg-[#8B0000]/20 rounded-lg p-2">
-              <p className="text-[#FF6B6B] text-xs">⚠️ VAT rose from 8% to 20% — opposite of NPP's promise. World Bank called this "particularly regressive."</p>
+              <p className="text-[#FF6B6B] text-xs">⚠️ {t("stats.vat_regressive")}</p>
             </div>
           </div>
         </div>
@@ -129,7 +132,7 @@ const StatisticsSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           {/* Vote share collapse */}
           <div className="bg-[#1a0505] border border-[#3a1010] rounded-2xl p-5">
-            <h3 className="text-white font-bold text-base mb-1">NPP Vote Share Collapse</h3>
+            <h3 className="text-white font-bold text-base mb-1">{t("stats.vote_collapse")}</h3>
             <p className="text-gray-500 text-xs mb-4">Presidential → Parliamentary → Local Elections (2024–2025)</p>
             <ResponsiveContainer width="100%" height={220}>
               <BarChart data={voteShareData}>
@@ -149,14 +152,14 @@ const StatisticsSection: React.FC = () => {
               </BarChart>
             </ResponsiveContainer>
             <div className="mt-3 bg-[#8B0000]/20 rounded-lg p-2">
-              <p className="text-[#FF6B6B] text-xs">⚠️ Vote share dropped 34% — from 6.8M to 4.5M — in just 6 months</p>
+              <p className="text-[#FF6B6B] text-xs">⚠️ {t("stats.vote_collapse_detail")}</p>
             </div>
           </div>
 
           {/* Local election pie */}
           <div className="bg-[#1a1500] border border-[#3a2500] rounded-2xl p-5">
-            <h3 className="text-white font-bold text-base mb-1">Local Council Distribution (May 2025)</h3>
-            <p className="text-gray-500 text-xs mb-4">339 total councils — NPP controls only 133 outright (39.2%)</p>
+            <h3 className="text-white font-bold text-base mb-1">{t("stats.local_councils")}</h3>
+            <p className="text-gray-500 text-xs mb-4">{t("stats.local_councils_detail")}</p>
             <ResponsiveContainer width="100%" height={220}>
               <PieChart>
                 <Pie
@@ -189,8 +192,8 @@ const StatisticsSection: React.FC = () => {
 
         {/* Promise vs Reality comparison */}
         <div className="bg-[#1a0505] border border-[#3a1010] rounded-2xl p-6">
-          <h3 className="text-white font-bold text-lg mb-2">Promises vs Reality — Key Metrics</h3>
-          <p className="text-gray-500 text-xs mb-6">Green = What they promised | Red = What actually happened</p>
+          <h3 className="text-white font-bold text-lg mb-2">{t("stats.promises_reality")}</h3>
+          <p className="text-gray-500 text-xs mb-6">{t("stats.chart_green")} | {t("stats.chart_red")}</p>
           <div className="space-y-5">
             {economicComparison.map((item, i) => {
               const promisedWidth = Math.min(100, Math.abs(item.promised) * 3);
@@ -201,9 +204,9 @@ const StatisticsSection: React.FC = () => {
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-gray-300 text-sm font-semibold">{item.category}</span>
                     <div className="flex items-center gap-3 text-xs">
-                      <span className="text-[#4CAF50]">Promised: {item.promised}{item.unit}</span>
+                      <span className="text-[#4CAF50]">{t("stats.chart_green").split("=")[1].trim()}: {item.promised}{item.unit}</span>
                       <span className={isNegative ? "text-[#FF6B6B]" : "text-[#FF4444]"}>
-                        Actual: {isNegative ? "" : ""}{item.actual}{item.unit}
+                        {t("stats.chart_red").split("=")[1].trim()}: {isNegative ? "" : ""}{item.actual}{item.unit}
                       </span>
                     </div>
                   </div>
@@ -234,14 +237,14 @@ const StatisticsSection: React.FC = () => {
         {/* World bank poverty quote */}
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
-            { num: "24.5%", label: "Current Poverty Rate", src: "World Bank 2024", color: "#FF6B6B" },
-            { num: "26%", label: "Food Insecurity Rate", src: "UNDP 2024", color: "#DAA520" },
-            { num: "38.5%", label: "Household Debt Rate", src: "UNDP 2024", color: "#FF8C00" },
+            { num: "24.5%", translationKey: "poverty", src: "World Bank 2024", color: "#FF6B6B" },
+            { num: "26%", translationKey: "food", src: "UNDP 2024", color: "#DAA520" },
+            { num: "38.5%", translationKey: "debt", src: "UNDP 2024", color: "#FF8C00" },
           ].map((stat, i) => (
             <div key={i} className="bg-[#1a0505] border border-[#3a1010] rounded-xl p-4 text-center">
               <div className="text-3xl font-black mb-1" style={{ color: stat.color }}>{stat.num}</div>
-              <div className="text-white font-semibold text-sm">{stat.label}</div>
-              <div className="text-gray-500 text-xs mt-1">Source: {stat.src}</div>
+              <div className="text-white font-semibold text-sm">{t(`verdict.stat.${stat.translationKey}`)}</div>
+              <div className="text-gray-500 text-xs mt-1">{t("stats.source_undp").split(":")[0]}: {stat.src}</div>
             </div>
           ))}
         </div>

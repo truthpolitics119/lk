@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { promises } from "../data/nppData";
 import LucideIcon from "./LucideIcon";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const PromisesSection: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   return (
     <section id="promises" className="py-20 bg-[#0d0000] relative">
@@ -22,10 +24,10 @@ const PromisesSection: React.FC = () => {
             <span className="text-[#FF6B6B] text-sm font-semibold uppercase tracking-widest">Section 1</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            The Broken <span className="text-[#DAA520]">Promises</span>
+            {t("nav.broken_promises").split(" ")[0]} <span className="text-[#DAA520]">{t("nav.broken_promises").split(" ").slice(1).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            The NPP/JVP won power on ambitious promises. Here's what they said — and what actually happened.
+            {t("promises.intro")}
           </p>
         </div>
 
@@ -68,25 +70,25 @@ const PromisesSection: React.FC = () => {
                         #{promise.id}
                       </span>
                       <span className="bg-red-900/30 text-red-400 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
-                        <LucideIcon name="X" size={10} /> Broken
+                        <LucideIcon name="X" size={10} /> {t("nav.broken_promises").split(" ")[0]}
                       </span>
                     </div>
-                    <h3 className="text-white font-bold text-lg mb-2">{promise.title}</h3>
+                    <h3 className="text-white font-bold text-lg mb-2">{t(`promise.${promise.translationKey}.title`)}</h3>
 
                     {/* Promised */}
                     <div className="bg-[#006400]/20 border border-[#006400]/40 rounded-lg p-3 mb-2">
                       <div className="text-[#4CAF50] text-xs font-bold uppercase mb-1 flex items-center gap-1.5">
-                        <LucideIcon name="CheckCircle2" size={12} /> They Promised:
+                        <LucideIcon name="CheckCircle2" size={12} /> {t("promises.col_promised")}:
                       </div>
-                      <p className="text-gray-300 text-sm leading-relaxed">{promise.promised}</p>
+                      <p className="text-gray-300 text-sm leading-relaxed">{t(`promise.${promise.translationKey}.detail`)}</p>
                     </div>
 
                     {/* Reality */}
                     <div className={`bg-[#8B0000]/20 border border-[#8B0000]/40 rounded-lg p-3 transition-all duration-300 ${expanded === promise.id ? "block" : "hidden md:block"}`}>
                       <div className="text-[#FF6B6B] text-xs font-bold uppercase mb-1 flex items-center gap-1.5">
-                        <LucideIcon name="AlertCircle" size={12} /> The Reality:
+                        <LucideIcon name="AlertCircle" size={12} /> {t("promises.col_reality")}:
                       </div>
-                      <p className="text-gray-300 text-sm leading-relaxed">{promise.reality}</p>
+                      <p className="text-gray-300 text-sm leading-relaxed">{t(`promise.${promise.translationKey}.reality`)}</p>
                     </div>
 
                     {/* Mobile: toggle button */}
