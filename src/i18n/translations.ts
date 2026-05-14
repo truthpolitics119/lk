@@ -1154,7 +1154,7 @@ export const translations: Record<string, any> = {
       },
     },
     ministers: {
-      heading: "මාක්ස්වාදී අමාත්‍යවරුන්ගේ",
+      heading: "මාක්ස්වාදී අමාත්‍යවරු,ධනවාදී වත්කම්",
       intro: "දශක ගණනාවක් පුරා ජනතා විමුක්ති පෙරමුණ තමන් කම්කරු පන්තියේ නියමුවන් ලෙස හඳුන්වා ගත්තේය. ඔවුන්ගේ ප්‍රකාශිත වත්කම් පවසන්නේ ඊට හාත්පසින්ම වෙනස් කතාවකි.",
       samarasinghe: {
         title: "වෙළඳ හා වාණිජ අමාත්‍ය",
@@ -1239,36 +1239,6 @@ export const translations: Record<string, any> = {
     disclaimer: {
       heading: "වියාචනය",
       body: "මෙම ලේඛනය පර්යේෂණ හා මහජන අවශ්‍යතා සඳහා, ප්‍රසිද්ධියේ ලබාගත හැකි ජාත්‍යන්තරව පිළිගත් විශ්වසනීය මූලාශ්‍ර මත සකස් කර ඇත. මෙය දේශපාලන පක්ෂයකට අනුග්‍රහයක් නොවන, පර්යේෂණ හා වගවීමේ ලේඛනයකි.",
-    },
-  },
-  it: {
-    site: {
-      title: "Registro di responsabilità politica dello Sri Lanka",
-      tagline: "La verità dietro le promesse",
-    },
-    scandals: {
-      note: "Nota",
-      note_text: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
-    },
-    scandal: {
-      coal: {
-        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
-      },
-      treasury: {
-        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
-      },
-      wealth: {
-        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
-      },
-      education: {
-        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
-      },
-      health: {
-        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
-      },
-      appt: {
-        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
-      },
     },
   },
 };

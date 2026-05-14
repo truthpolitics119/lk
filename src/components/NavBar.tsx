@@ -39,18 +39,6 @@ const NavBar: React.FC = () => {
     setMenuOpen(false);
   };
 
-  const toggleLanguage = () => {
-    if (language === "en") setLanguage("si");
-    else if (language === "si") setLanguage("it");
-    else setLanguage("en");
-  };
-
-  const languageLabel = {
-    en: "English",
-    si: "සිංහල",
-    it: "Italiano"
-  };
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -84,28 +72,55 @@ const NavBar: React.FC = () => {
             </button>
           ))}
           
-          <button
-            onClick={toggleLanguage}
-            className="ml-4 px-3 py-1.5 rounded-full text-xs font-bold bg-white/10 text-white hover:bg-white/20 transition-all flex items-center gap-2 border border-white/20"
-          >
-            <LucideIcon name="Languages" size={14} />
-            {languageLabel[language]}
-          </button>
+          <div className="ml-4 flex items-center bg-white/5 rounded-full p-0.5 border border-white/10">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`px-3 py-1 rounded-full text-[10px] font-black transition-all duration-300 ${
+                language === "en" 
+                  ? "bg-[#DAA520] text-black shadow-[0_0_15px_rgba(218,165,32,0.4)]" 
+                  : "text-gray-500 hover:text-gray-300"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("si")}
+              className={`px-3 py-1 rounded-full text-[10px] font-black transition-all duration-300 ${
+                language === "si" 
+                  ? "bg-[#DAA520] text-black shadow-[0_0_15px_rgba(218,165,32,0.4)]" 
+                  : "text-gray-500 hover:text-gray-300"
+              }`}
+            >
+              සිංහල
+            </button>
+          </div>
         </div>
 
         {/* Mobile controls */}
-        <div className="flex items-center gap-2 md:hidden">
-          <button
-            onClick={toggleLanguage}
-            className="px-2 py-1 rounded-md text-[10px] font-bold bg-white/10 text-white border border-white/20"
-          >
-            {language.toUpperCase()}
-          </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center bg-white/5 rounded-lg p-0.5 border border-white/10">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`px-2 py-1 rounded text-[10px] font-black transition-all ${
+                language === "en" ? "bg-[#DAA520] text-black" : "text-gray-500"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("si")}
+              className={`px-2 py-1 rounded text-[10px] font-black transition-all ${
+                language === "si" ? "bg-[#DAA520] text-black" : "text-gray-500"
+              }`}
+            >
+              සිංහල
+            </button>
+          </div>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white p-2"
+            className="text-white p-1"
           >
-            <LucideIcon name={menuOpen ? "X" : "Menu"} size={24} />
+            <LucideIcon name={menuOpen ? "X" : "Menu"} size={22} />
           </button>
         </div>
       </div>

@@ -51,6 +51,15 @@ body {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+@keyframes scroll {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0; }
+}
+
+.animate-scroll {
+  animation: scroll 1.5s infinite;
+}
+
 /* Recharts text override */
 .recharts-text {
   fill: #888 !important;

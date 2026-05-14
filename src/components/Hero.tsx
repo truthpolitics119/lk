@@ -105,8 +105,11 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <LucideIcon name="ChevronDown" size={32} className="text-white/50" />
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <div className="w-[24px] h-[40px] border-2 border-white/20 rounded-full flex justify-center p-1.5">
+          <div className="w-1 h-2 bg-[#DAA520] rounded-full animate-scroll" />
+        </div>
+        <LucideIcon name="ChevronDown" size={16} className="text-white/20 animate-bounce" />
       </div>
     </div>
   );
