@@ -69,7 +69,7 @@ const PromisesSection: React.FC = () => {
                         #{promise.id}
                       </span>
                       <span className="bg-red-900/30 text-red-400 text-xs px-2 py-0.5 rounded-full flex items-center gap-1">
-                        <LucideIcon name="X" size={10} /> {t("nav.broken_promises").split(" ")[0]}
+                        <LucideIcon name="X" size={10} /> {t("promises.broken_label")}
                       </span>
                     </div>
                     <h3 className="text-white font-bold text-lg mb-2">{t(`promise.${promise.translationKey}.title`)}</h3>

@@ -40,7 +40,7 @@ All entries follow the format `English → සිංහල`.
 | Key | English | Sinhala |
 |---|---|---|
 | `nav.government` | Government | ආණ්ඩුව |
-| `nav.broken_promises` | Broken Promises | බිඳ දැමූ පොරොන්දු |
+| `nav.broken_promises` | Broken Promises | බිඳවැටුණු පොරොන්දු |
 | `nav.scandals` | Major Scandals | ප්‍රධාන වංචා සහ කූටචාර |
 | `nav.vote_share_drop` | Vote Share Drop | ඡන්ද ප්‍රතිශතයේ පසුබැසීම |
 | `nav.lives_lost` | Lives Lost (JVP History) | ජීවිත හානි (JVP ඉතිහාසය) |
@@ -55,7 +55,7 @@ All entries follow the format `English → සිංහල`.
 
 | Key | English | Sinhala |
 |---|---|---|
-| `cta.see_promises` | See the Broken Promises | බිඳ දැමූ පොරොන්දු බලන්න |
+| `cta.see_promises` | See the Broken Promises | බිඳවැටුණු පොරොන්දු බලන්න |
 | `cta.explore_scandals` | Explore Scandals | වංචා සහ ගැටළු සොයන්න |
 | `cta.view_timeline` | View Timeline | කාලරේඛාව නරඹන්න |
 

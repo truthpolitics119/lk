@@ -116,6 +116,7 @@ export const translations: Record<string, any> = {
       intro: "The NPP/JVP won power on ambitious promises. Here's what they said — and what actually happened.",
       col_promised: "They Promised",
       col_reality: "The Reality",
+      broken_label: "Broken",
       broken_8_out_of_8: "8 out of 8 Major Promises Broken",
       broken_8_out_of_8_detail: "From renegotiating the IMF deal to reducing taxes on food, increasing public salaries by 25%, and developing Sri Lanka in six months — every major economic and governance promise made to Sri Lankan voters has been abandoned, reversed, or left unfulfilled.",
     },
@@ -579,7 +580,7 @@ export const translations: Record<string, any> = {
     },
     nav: {
       government: "ආණ්ඩුව",
-      broken_promises: "බිඳ දැමූ පොරොන්දු",
+      broken_promises: "බිඳවැටුණු පොරොන්දු",
       scandals: "ප්‍රධාන වංචා සහ කූටචාර",
       vote_share_drop: "ඡන්ද ප්‍රතිශතයේ පසුබැසීම",
       lives_lost: "ජීවිත හානි (JVP ඉතිහාසය)",
@@ -589,7 +590,7 @@ export const translations: Record<string, any> = {
       sources: "මූලාශ්‍ර",
     },
     cta: {
-      see_promises: "බිඳ දැමූ පොරොන්දු බලන්න",
+      see_promises: "බිඳවැටුණු පොරොන්දු බලන්න",
       explore_scandals: "වංචා සහ ගැටළු සොයන්න",
       view_timeline: "කාලරේඛාව නරඹන්න",
     },
@@ -688,6 +689,7 @@ export const translations: Record<string, any> = {
       intro: "NPP/JVP උද්යෝගශීලී පොරොන්දු මත බලයට පැමිණියේය. ඔවුන් පැවසූ දේ — සහ ඇත්තටම සිදු වූ දේ මෙන්න.",
       col_promised: "ඔවුන් පොරොන්දු වූයේ",
       col_reality: "යථාර්ථය",
+      broken_label: "බිඳ වැටුණි",
       broken_8_out_of_8: "ප්‍රධාන පොරොන්දු 8න් 8ක්ම බිඳ දමා ඇත",
       broken_8_out_of_8_detail: "IMF ගිවිසුම නැවත සාකච්ඡා කිරීමේ සිට ආහාර මත බදු අඩු කිරීම, රජයේ වැටුප් 25%කින් වැඩි කිරීම සහ මාස හයකින් ශ්‍රී ලංකාව සංවර්ධනය කිරීම දක්වා — ශ්‍රී ලාංකික ඡන්දදායකයින්ට ලබා දුන් සෑම ප්‍රධාන ආර්ථික හා පාලන පොරොන්දුවක්ම අත්හැර දමා, ආපසු හරවා හෝ ඉටු නොකර ඇත.",
     },
