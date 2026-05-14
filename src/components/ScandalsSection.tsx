@@ -159,15 +159,15 @@ const ScandalsSection: React.FC = () => {
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="bg-[#1a0a00] border-l-4 border-[#DAA520] rounded-xl p-5">
             <p className="text-gray-300 italic leading-relaxed">
-              "The NPP has focused on arresting individuals while leaving intact the very systems that enabled their corruption. This represents what one might call 'performative accountability' — visible action that generates headlines but produces little substantive change."
+              {t("scandals.quote1")}
             </p>
-            <p className="text-[#DAA520] font-semibold mt-3 text-xs">— Anti-corruption Analysis, 2025</p>
+            <p className="text-[#DAA520] font-semibold mt-3 text-xs">{t("scandals.quote1_attribution")}</p>
           </div>
           <div className="bg-[#1a0a00] border-l-4 border-[#8B0000] rounded-xl p-5">
             <p className="text-gray-300 italic leading-relaxed">
-              "The very people who once championed freedom of speech and expression are now issuing orders to abolish it, showing the government has embarked on a path against democracy."
+              {t("scandals.quote2")}
             </p>
-            <p className="text-[#FF6B6B] font-semibold mt-3 text-xs">— Sri Lanka Working Journalists' Association (SLWJA), 2025</p>
+            <p className="text-[#FF6B6B] font-semibold mt-3 text-xs">{t("scandals.quote2_attribution")}</p>
           </div>
         </div>
       </div>

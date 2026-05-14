@@ -116,17 +116,17 @@ const TimelineSection: React.FC = () => {
 
         {/* Bottom callout */}
         <div className="mt-12 bg-gradient-to-r from-[#8B0000]/20 via-[#DAA520]/10 to-[#006400]/20 border border-[#DAA520]/30 rounded-2xl p-6">
-          <h3 className="text-white font-bold text-lg mb-3 text-center">The JVP's Fundamental Contradiction</h3>
+          <h3 className="text-white font-bold text-lg mb-3 text-center">{t("timeline.contradiction")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             {[
-              { era: "1960s–1989", label: "Revolutionary Marxists", desc: "Armed insurrections, assassinations, enforced strikes, ~65,000+ killed", color: "#FF4444" },
-              { era: "1994–2019", label: "Parliamentary Left", desc: "Gradual integration into Sri Lanka's mainstream democratic political establishment", color: "#87CEEB" },
-              { era: "2020–Today", label: "Neoliberal Capitalists", desc: "IMF compliance, minister wealth revelations, privatization path, crypto investments", color: "#DAA520" },
+              { era: "1960s–1989", translationKey: "phase1", color: "#FF4444" },
+              { era: "1994–2019", translationKey: "phase2", color: "#87CEEB" },
+              { era: "2020–Today", translationKey: "phase3", color: "#DAA520" },
             ].map((phase, i) => (
               <div key={i} className="bg-black/30 rounded-xl p-4">
                 <div className="text-xs font-bold mb-1" style={{ color: phase.color }}>{phase.era}</div>
-                <div className="text-white font-bold text-sm mb-2">{phase.label}</div>
-                <div className="text-gray-400 text-xs">{phase.desc}</div>
+                <div className="text-white font-bold text-sm mb-2">{t(`timeline.${phase.translationKey}.label`)}</div>
+                <div className="text-gray-400 text-xs">{t(`timeline.${phase.translationKey}.desc`)}</div>
               </div>
             ))}
           </div>

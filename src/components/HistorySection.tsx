@@ -53,7 +53,7 @@ const HistorySection: React.FC = () => {
                 </div>
                 <div className="bg-[#8B0000]/40 rounded-xl p-3 text-center flex-1">
                   <div className="text-2xl font-black text-[#FF6B6B]">2 months</div>
-                  <div className="text-gray-400 text-xs">Duration</div>
+                  <div className="text-gray-400 text-xs">{t("history.duration")}</div>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@ const HistorySection: React.FC = () => {
                 </div>
                 <div className="bg-[#8B0000]/60 rounded-xl p-3 text-center flex-1">
                   <div className="text-2xl font-black text-[#FF4444]">3 years</div>
-                  <div className="text-gray-400 text-xs">Country Paralyzed</div>
+                  <div className="text-gray-400 text-xs">{t("history.country_paralyzed")}</div>
                 </div>
               </div>
             </div>
@@ -117,18 +117,19 @@ const HistorySection: React.FC = () => {
             <BarChart data={insurrectionCosts}>
               <CartesianGrid strokeDasharray="3 3" stroke="#2a0505" />
               <XAxis
-                dataKey="conflict"
+                dataKey="translationKey"
                 stroke="#555"
                 tick={{ fill: "#888", fontSize: 9 }}
                 interval={0}
                 height={60}
-                tickFormatter={(v) => v.length > 20 ? v.substring(0, 20) + "…" : v}
+                tickFormatter={(v) => t(`history.human_cost.${v}`)}
               />
               <YAxis stroke="#555" tick={{ fill: "#888", fontSize: 11 }} tickFormatter={(v) => `$${v}B`} />
               <Tooltip
                 contentStyle={{ background: "#1a0505", border: "1px solid #8B0000", borderRadius: "8px" }}
                 labelStyle={{ color: "#fff", fontSize: "11px" }}
-                formatter={(v: any) => [`$${v}B estimated cost`, "Economic Impact"]}
+                labelFormatter={(v) => t(`history.human_cost.${v}`)}
+                formatter={(v: any) => [`$${v}B ${t("history.estimated_cost")}`, t("history.economic_impact")]}
               />
               <Bar dataKey="cost" radius={[6, 6, 0, 0]}>
                 {insurrectionCosts.map((_, i) => (
@@ -152,7 +153,7 @@ const HistorySection: React.FC = () => {
               return (
                 <div key={i}>
                   <div className="flex justify-between items-center mb-1.5">
-                    <span className="text-gray-300 text-sm">{item.conflict}</span>
+                    <span className="text-gray-300 text-sm">{t(`history.human_cost.${item.translationKey}`)}</span>
                     <span className="font-bold text-sm" style={{ color: colors[i] }}>
                       {item.deaths.toLocaleString()} {t("history.human_cost.lives")}
                     </span>

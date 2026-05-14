@@ -38,10 +38,9 @@ const PromisesSection: React.FC = () => {
               <LucideIcon name="XCircle" size={48} className="text-[#FF6B6B]" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white mb-1">8 out of 8 Major Promises Broken</h3>
+              <h3 className="text-xl font-bold text-white mb-1">{t("promises.broken_8_out_of_8")}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                From renegotiating the IMF deal to reducing taxes on food, increasing public salaries by 25%, and developing Sri Lanka in six months —
-                every major economic and governance promise made to Sri Lankan voters has been abandoned, reversed, or left unfulfilled.
+                {t("promises.broken_8_out_of_8_detail")}
               </p>
             </div>
             <div className="bg-[#8B0000] rounded-xl px-6 py-3 text-center flex-shrink-0">

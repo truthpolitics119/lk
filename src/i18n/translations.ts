@@ -67,6 +67,8 @@ export const translations: Record<string, any> = {
       intro: "The NPP/JVP won power on ambitious promises. Here's what they said — and what actually happened.",
       col_promised: "They Promised",
       col_reality: "The Reality",
+      broken_8_out_of_8: "8 out of 8 Major Promises Broken",
+      broken_8_out_of_8_detail: "From renegotiating the IMF deal to reducing taxes on food, increasing public salaries by 25%, and developing Sri Lanka in six months — every major economic and governance promise made to Sri Lankan voters has been abandoned, reversed, or left unfulfilled.",
     },
     promise: {
       imf: {
@@ -119,11 +121,16 @@ export const translations: Record<string, any> = {
       intro: "From a $2.5 million Treasury heist to coal fraud — the government that promised clean governance.",
       key_findings: "Key Findings",
       note: "Note",
+      note_text: "These are the actions of a government that campaigned on an anti-corruption, clean governance platform — branding itself as fundamentally different from the corrupt political establishment it replaced.",
       risk: {
         critical: "CRITICAL",
         high: "HIGH",
         medium: "MEDIUM",
       },
+      quote1: "The NPP has focused on arresting individuals while leaving intact the very systems that enabled their corruption. This represents what one might call 'performative accountability' — visible action that generates headlines but produces little substantive change.",
+      quote1_attribution: "— Anti-corruption Analysis, 2025",
+      quote2: "The very people who once championed freedom of speech and expression are now issuing orders to abolish it, showing the government has embarked on a path against democracy.",
+      quote2_attribution: "— Sri Lanka Working Journalists' Association (SLWJA), 2025",
     },
     scandal: {
       coal: {
@@ -146,6 +153,7 @@ export const translations: Record<string, any> = {
         finding3: "Ex-NPP MP Harshana Suriyapperuma appointed as Treasury Secretary in June 2025",
         finding4: "NPP 'deeply regrets' the appointment",
         finding5: "Sri Lanka exposed as fertile ground for cybercrime due to weak digital security",
+        note: "These are the actions of a government that campaigned on an anti-corruption, clean governance platform — branding itself as fundamentally different from the corrupt political establishment it replaced.",
       },
       wealth: {
         title: "Minister Wealth Scandal",
@@ -156,6 +164,7 @@ export const translations: Record<string, any> = {
         finding3: "Toyota Prius + solar units + cryptocurrency holdings",
         finding4: "Agriculture Minister Lal Kantha owns Rs. 80 million+ property",
         finding5: "SJB filed CIABOC complaint against 6 NPP/JVP ministers",
+        note: "These are the actions of a government that campaigned on an anti-corruption, clean governance platform — branding itself as fundamentally different from the corrupt political establishment it replaced.",
       },
       education: {
         title: "Education Module Scandal",
@@ -165,7 +174,7 @@ export const translations: Record<string, any> = {
         finding2: "Education reforms subsequently abandoned",
         finding3: "No action against former speaker with forged certificates",
         finding4: "Ministry failed to verify content before distribution",
-        note: "Note: The education sector has seen significant controversy since the NPP took office, despite their promises of systemic reform.",
+        note: "These are the actions of a government that campaigned on an anti-corruption, clean governance platform — branding itself as fundamentally different from the corrupt political establishment it replaced.",
       },
       health: {
         title: "Health Spending Cuts",
@@ -176,6 +185,7 @@ export const translations: Record<string, any> = {
         finding3: "Hospital conditions deteriorated",
         finding4: "Contradicts campaign promises to improve healthcare",
         finding5: "Austerity prioritized over humanitarian needs",
+        note: "These are the actions of a government that campaigned on an anti-corruption, clean governance platform — branding itself as fundamentally different from the corrupt political establishment it replaced.",
       },
       appt: {
         title: "Political Appointments Scandal",
@@ -186,6 +196,7 @@ export const translations: Record<string, any> = {
         finding3: "AKD repeatedly defended unqualified appointments in Parliament",
         finding4: "Auditor General position left vacant 10 months",
         finding5: "Constitutional Council used to approve more pliable candidates",
+        note: "These are the actions of a government that campaigned on an anti-corruption, clean governance platform — branding itself as fundamentally different from the corrupt political establishment it replaced.",
       },
     },
     stats: {
@@ -212,6 +223,12 @@ export const translations: Record<string, any> = {
       chart_red: "Red = What actually happened",
       source_wb: "Source: World Bank 2024",
       source_undp: "Source: UNDP 2024",
+      stats_wb_undp: "2019–2024 — World Bank & UNDP Data",
+      stats_revenue: "2019–2024 — Sri Lanka Revenue Authority Data",
+      stats_elections: "Presidential → Parliamentary → Local Elections (2024–2025)",
+      m_votes: "M votes",
+      npp_votes: "NPP Votes",
+      council_control_warning: "NPP attempted to control councils without majority — called 'tarnishing good governance claims'",
     },
     chart: {
       poverty_rate: "Poverty Rate",
@@ -221,6 +238,7 @@ export const translations: Record<string, any> = {
       current_poverty: "Current Poverty Rate",
       food_insecurity: "Food Insecurity Rate",
       household_debt: "Household Debt Rate",
+      poverty_rate_comp: "Poverty Rate",
     },
     map: {
       heading: "Impact Across Sri Lanka",
@@ -262,6 +280,19 @@ export const translations: Record<string, any> = {
         political: "political",
         victory: "victory",
         scandal: "scandal",
+      },
+      contradiction: "The JVP's Fundamental Contradiction",
+      phase1: {
+        label: "Revolutionary Marxists",
+        desc: "Armed insurrections, assassinations, enforced strikes, ~65,000+ killed",
+      },
+      phase2: {
+        label: "Parliamentary Left",
+        desc: "Gradual integration into Sri Lanka's mainstream democratic political establishment",
+      },
+      phase3: {
+        label: "Neoliberal Capitalists",
+        desc: "IMF compliance, minister wealth revelations, privatization path, crypto investments",
       },
     },
     timeline_events: {
@@ -342,6 +373,24 @@ export const translations: Record<string, any> = {
       },
       claimed: "They Claimed",
       reality: "The Reality",
+      authoritarian_heading: "Authoritarian Tendencies",
+      authoritarian_points: {
+        point1_title: "Emergency Powers Against Critics",
+        point1_desc: "Used emergency regulations against social media users criticizing Cyclone Ditwah response",
+        point2_title: "Auditor General Vacancy",
+        point2_desc: "Left the Auditor General position vacant for ~10 months until a more 'pliable' candidate was approved",
+        point3_title: "Council Control Without Majority",
+        point3_desc: "Attempted to control local councils without winning outright majorities — called 'tarnishing good governance'",
+        point4_title: "AG Social Media Attacks",
+        point4_desc: "Tacitly supported social media brigade attacks against the Attorney General",
+        point5_title: "Media Freedom Threats",
+        point5_desc: "SLWJA documented multiple incidents threatening media freedom over 15 months",
+        point6_title: "NCM Defeated by Steamroller",
+        point6_desc: "Used parliamentary supermajority to defeat No-Confidence Motion against Energy Minister amid coal fraud",
+      },
+      wolf_heading: "The Wolf in Sheep's Clothing",
+      wolf_body: "\"The movement's founding ideology rested on anti-imperialism, economic self-sufficiency, independence from Cold War superpowers, a commitment to incorruptibility, and a vision of national unity under socialist governance. Yet today, the NPP proudly courts foreign investors, upholds the IMF framework, and its ministers hold cryptocurrency and equity portfolios.\"",
+      wolf_attribution: "— Documented ideological record vs. current government practice",
     },
     hypo: {
       marxism: {
@@ -471,7 +520,15 @@ export const translations: Record<string, any> = {
         title: "Human Cost Comparison",
         subtitle: "Deaths associated with each conflict (estimated)",
         lives: "lives",
+        conflict1: "1971 JVP Insurrection",
+        conflict2: "1987-89 JVP Insurrection",
+        conflict3: "LTTE Civil War (1983-2009)",
+        conflict4: "Post-2019 Security Costs",
       },
+      duration: "Duration",
+      country_paralyzed: "Country Paralyzed",
+      economic_impact: "Economic Impact",
+      estimated_cost: "estimated cost",
       quote1: {
         body: "\"The JVP insurrections ate into the fabric of rural life. The development of enterprises and investment came to a standstill. Today, the JVP has changed its tune, but it is all a wolf in sheep's clothing!\"",
         attribution: "— Sri Lanka Economic History Research, cited sources",
@@ -615,6 +672,7 @@ export const translations: Record<string, any> = {
         povertyNote: "Fisheries and tourism sectors impacted by economic policies",
       },
     },
+    sources_title: "Sources & References",
     disclaimer: {
       heading: "Disclaimer",
       body: "This document is compiled from publicly available, internationally recognized credible sources for research and public interest documentation purposes. All data is sourced from named publications with verifiable references. This is a research and accountability record, not a political party endorsement.",
@@ -646,6 +704,8 @@ export const translations: Record<string, any> = {
       intro: "NPP/JVP උද්යෝගශීලී පොරොන්දු මත බලයට පැමිණියේය. ඔවුන් පැවසූ දේ — සහ ඇත්තටම සිදු වූ දේ මෙන්න.",
       col_promised: "ඔවුන් පොරොන්දු වූයේ",
       col_reality: "යථාර්ථය",
+      broken_8_out_of_8: "ප්‍රධාන පොරොන්දු 8න් 8ක්ම බිඳ දමා ඇත",
+      broken_8_out_of_8_detail: "IMF ගිවිසුම නැවත සාකච්ඡා කිරීමේ සිට ආහාර මත බදු අඩු කිරීම, රජයේ වැටුප් 25%කින් වැඩි කිරීම සහ මාස හයකින් ශ්‍රී ලංකාව සංවර්ධනය කිරීම දක්වා — ශ්‍රී ලාංකික ඡන්දදායකයින්ට ලබා දුන් සෑම ප්‍රධාන ආර්ථික හා පාලන පොරොන්දුවක්ම අත්හැර දමා, ආපසු හරවා හෝ ඉටු නොකර ඇත.",
     },
     promise: {
       imf: {
@@ -698,11 +758,16 @@ export const translations: Record<string, any> = {
       intro: "ඩොලර් මිලියන 2.5 ක භාණ්ඩාගාර සයිබර් වංචාවක් සිට ගල්අඟුරු මිලදී ගැනීමේ කූටචාර දක්වා — පිරිසිදු පාලනයක් පොරොන්දු වූ ආණ්ඩුව.",
       key_findings: "ප්‍රධාන නිරීක්ෂණ",
       note: "සටහන",
+      note_text: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ — ඔවුන් විසින්ම විවේචනය කළ දූෂිත දේශපාලන පද්ධතියට වඩා ඔවුන් වෙනස් නොවන බව මෙයින් පැහැදිලි වේ.",
       risk: {
         critical: "තීරණාත්මක අවදානම් මට්ටම",
         high: "ඉහළ අවදානම් මට්ටම",
         medium: "මධ්‍යම අවදානම් මට්ටම",
       },
+      quote1: "NPP අවධානය යොමු කර ඇත්තේ පුද්ගලයන් අත්අඩංගුවට ගැනීමට පමණි, නමුත් ඔවුන්ගේ දූෂණයට ඉඩ සැලසූ පද්ධති එලෙසම පවතී. මෙය 'ප්‍රදර්ශනාත්මක වගවීමක්' ලෙස හැඳින්විය හැකිය — ප්‍රධාන පුවත් මවන නමුත් සැබෑ වෙනසක් ඇති නොකරන ක්‍රියාවන්ය.",
+      quote1_attribution: "— දූෂණ විරෝධී විශ්ලේෂණය, 2025",
+      quote2: "දිනෙක අදහස් ප්‍රකාශ කිරීමේ නිදහස වෙනුවෙන් පෙනී සිටි පුද්ගලයින්ම දැන් එය මර්දනය කිරීමට නියෝග නිකුත් කරමින් සිටින අතර, එයින් පෙනී යන්නේ ආණ්ඩුව ප්‍රජාතන්ත්‍රවාදයට එරෙහි මාවතකට අවතීර්ණ වී ඇති බවයි.",
+      quote2_attribution: "— ශ්‍රී ලංකා වෘත්තීය මාධ්‍යවේදීන්ගේ සංගමය (SLWJA), 2025",
     },
     scandal: {
       coal: {
@@ -714,7 +779,7 @@ export const translations: Record<string, any> = {
         finding3: "බලශක්ති අමාත්‍ය කුමාර ජයකොඩි ඉල්ලා අස්වීමට බලකර ඇත",
         finding4: "2026 අප්‍රේල් 10 දින විශ්වාසභංග යෝජනාව පාර්ලිමේන්තු බහුතරය භාවිතයෙන් පරාජය කරන ලදී",
         finding5: "ඉහළ විදුලි බිල්පත් හරහා අවසාන වශයෙන් පාරිභෝගිකයින්ට වියදම් පැවරී ඇත",
-        note: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ.",
+        note: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ — ඔවුන් විසින්ම විවේචනය කළ දූෂිත දේශපාලන පද්ධතියට වඩා ඔවුන් වෙනස් නොවන බව මෙයින් පැහැදිලි වේ.",
       },
       treasury: {
         title: "ඩොලර් මිලියන 2.5 ක භාණ්ඩාගාර සයිබර් වංචාව",
@@ -725,6 +790,7 @@ export const translations: Record<string, any> = {
         finding3: "2025 ජූනි මාසයේ හිටපු NPP පාර්ලිමේන්තු මන්ත්‍රී හර්ෂණ සුරියප්පෙරුම භාණ්ඩාගාර ලේකම් ලෙස පත් කර ඇත",
         finding4: "එම පත්වීම පිළිබඳ NPP \"ගැඹුරු කණගාටුව\" ප්‍රකාශ කර ඇත",
         finding5: "දුර්වල ඩිජිටල් ආරක්ෂාව හේතුවෙන් ශ්‍රී ලංකාව සයිබර් අපරාධ සඳහා පහසු භූමියක් බවට පත්වී ඇත",
+        note: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ — ඔවුන් විසින්ම විවේචනය කළ දූෂිත දේශපාලන පද්ධතියට වඩා ඔවුන් වෙනස් නොවන බව මෙයින් පැහැදිලි වේ.",
       },
       wealth: {
         title: "අමාත්‍යවරුන්ගේ සම්පත් විවාදය",
@@ -735,6 +801,7 @@ export const translations: Record<string, any> = {
         finding3: "Toyota Prius රථයක්, සූර්ය බල ඒකක, ක්‍රිප්ටෝකරන්සි ආයෝජන",
         finding4: "කෘෂිකර්ම අමාත්‍ය ලාල් කාන්ත සතුව රු. මිලියන 80 කට අධික දේපළ",
         finding5: "SJB විසින් NPP/JVP අමාත්‍යවරු 6 දෙනෙකුට එරෙහිව CIABOC ට පැමිණිල්ලක් ඉදිරිපත් කර ඇත",
+        note: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ — ඔවුන් විසින්ම විවේචනය කළ දූෂිත දේශපාලන පද්ධතියට වඩා ඔවුන් වෙනස් නොවන බව මෙයින් පැහැදිලි වේ.",
       },
       education: {
         title: "අධ්‍යාපන මොඩියුලය සම්බන්ධ විවාදය",
@@ -744,7 +811,7 @@ export const translations: Record<string, any> = {
         finding2: "පසුව අධ්‍යාපන ප්‍රතිසංස්කරණ අතහැර දැමීමට සිදු වීම",
         finding3: "ව්‍යාජ සහතික ඉදිරිපත් කළ හිටපු කථානායකවරයාට එරෙහිව පියවර නොගැනීම",
         finding4: "අන්තර්ගතය බෙදා හැරීමට පෙර අමාත්‍යාංශය නිසි ලෙස පරීක්ෂා නොකිරීම",
-        note: "සටහන: NPP බලයට පත් වූ පසු අධ්‍යාපන ක්ෂේත්‍රය තුළ සැලකිය යුතු මතභේදකාරී තත්ත්වයන් හටගෙන ඇත.",
+        note: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ — ඔවුන් විසින්ම විවේචනය කළ දූෂිත දේශපාලන පද්ධතියට වඩා ඔවුන් වෙනස් නොවන බව මෙයින් පැහැදිලි වේ.",
       },
       health: {
         title: "සෞඛ්‍ය වියදම් කප්පාදුව",
@@ -755,6 +822,7 @@ export const translations: Record<string, any> = {
         finding3: "රෝහල් පද්ධතියේ පහසුකම් පිරිහීම",
         finding4: "සෞඛ්‍ය වර්ධනය පිළිබඳ මැතිවරණ පොරොන්දු වලට පටහැනි ප්‍රතිපත්ති",
         finding5: "මානුෂීය අවශ්‍යතා වෙනුවට ආර්ථික කප්පාදු ප්‍රමුඛතාවය",
+        note: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ — ඔවුන් විසින්ම විවේචනය කළ දූෂිත දේශපාලන පද්ධතියට වඩා ඔවුන් වෙනස් නොවන බව මෙයින් පැහැදිලි වේ.",
       },
       appt: {
         title: "දේශපාලන පත්වීම් විවාදය",
@@ -765,6 +833,7 @@ export const translations: Record<string, any> = {
         finding3: "පාර්ලිමේන්තුවේදී සුදුසුකම් නොමැති පත්වීම් ආරක්ෂා කර ඇත",
         finding4: "විගණකාධිපති තනතුර මාස 10 ක් පුරා හිස්ව තිබුණි",
         finding5: "ව්‍යවස්ථාදායක සභාව වඩාත් පහසුවෙන් පාලනය කළ හැකි අපේක්ෂකයන් අනුමත කිරීමට භාවිතා කෙරිණි",
+        note: "දූෂණ විරෝධී සහ පිරිසිදු පාලන වේදිකාවකින් ප්‍රචාරණය කළ ආණ්ඩුවක් විසින් සිදු කළ ක්‍රියාමාර්ග වේ — ඔවුන් විසින්ම විවේචනය කළ දූෂිත දේශපාලන පද්ධතියට වඩා ඔවුන් වෙනස් නොවන බව මෙයින් පැහැදිලි වේ.",
       },
     },
     stats: {
@@ -791,6 +860,12 @@ export const translations: Record<string, any> = {
       chart_red: "රතු පාට = සිදු වූ දේ",
       source_wb: "මූලාශ්‍රය: ලෝක බැංකුව (2024)",
       source_undp: "මූලාශ්‍රය: UNDP (2024)",
+      stats_wb_undp: "2019–2024 — ලෝක බැංකුව සහ UNDP දත්ත",
+      stats_revenue: "2019–2024 — ශ්‍රී ලංකා ආදායම් අධිකාරියේ දත්ත",
+      stats_elections: "ජනාධිපති → පාර්ලිමේන්තු → ප්‍රාදේශීය සභා මැතිවරණ (2024–2025)",
+      m_votes: "මිලියන ඡන්ද",
+      npp_votes: "NPP ඡන්ද",
+      council_control_warning: "බහුතරය නොමැතිව සභා පාලනය කිරීමට NPP දැරූ උත්සාහය — 'යහපාලන ප්‍රකාශයන් කෙලෙසීමක්' ලෙස හැඳින්වේ",
     },
     chart: {
       poverty_rate: "දරිද්‍රතා අනුපාතය",
@@ -800,6 +875,7 @@ export const translations: Record<string, any> = {
       current_poverty: "වර්තමාන දරිද්‍රතා අනුපාතය",
       food_insecurity: "ආහාර අනාරක්ෂිතතා අනුපාතය",
       household_debt: "ගෘහස්ථ ණය අනුපාතය",
+      poverty_rate_comp: "දරිද්‍රතා අනුපාතය",
     },
     map: {
       heading: "ශ්‍රී ලංකාව පුරා බලපෑම",
@@ -841,6 +917,19 @@ export const translations: Record<string, any> = {
         political: "දේශපාලන",
         victory: "ජයග්‍රහණය",
         scandal: "ආන්දෝලනය",
+      },
+      contradiction: "ජනතා විමුක්ති පෙරමුණේ මූලික පරස්පර විරෝධය",
+      phase1: {
+        label: "විප්ලවවාදී මාක්ස්වාදීන්",
+        desc: "සන්නද්ධ කැරලි, ඝාතන, බලහත්කාර වැඩවර්ජන, ~65,000+ මියගොස් ඇත",
+      },
+      phase2: {
+        label: "පාර්ලිමේන්තු වාම පක්ෂය",
+        desc: "ශ්‍රී ලංකාවේ ප්‍රධාන ධාරාවේ ප්‍රජාතන්ත්‍රවාදී දේශපාලන පද්ධතියට ක්‍රමිකව ඒකාබද්ධ වීම",
+      },
+      phase3: {
+        label: "නව-ලිබරල් ධනවාදීන්",
+        desc: "IMF අනුකූලතාවය, අමාත්‍යවරුන්ගේ වත්කම් හෙළිදරව් වීම, පුද්ගලිකකරණ මාවත, ක්‍රිප්ටෝ ආයෝජන",
       },
     },
     timeline_events: {
@@ -901,6 +990,66 @@ export const translations: Record<string, any> = {
         body: "ගල්අඟුරු NAO වාර්තාව, විශ්වාසභංග යෝජනාව පරාජය, UN මානව හිමිකම් වාර්තාව ප්‍රකාශිතය",
       },
     },
+    province_data: {
+      northern: {
+        name: "උතුරු පළාත",
+        capital: "යාපනය",
+        nppResult: "අඩු NPP සහයෝගයක් — JVP හි සිංහල ජාතිකවාදී ඉතිහාසය පිළිබඳ දෙමළ ප්‍රජාව සැකයෙන් පසුවෙයි",
+        povertyNote: "පශ්චාත් යුධ දරිද්‍රතාවය තවමත් පවතී",
+        scandal: "NPP පොරොන්දු වුවද PTA තවමත් දෙමළ සුළුතරයට එරෙහිව භාවිතා වේ",
+      },
+      "north-central": {
+        name: "උතුරු මැද පළාත",
+        capital: "අනුරාධපුර",
+        nppResult: "මධ්‍යම මට්ටමේ NPP සහයෝගයක්",
+        povertyNote: "කෘෂිකාර්මික දරිද්‍රතාවය ඉහළයි — ප්‍රමාණවත් සහයෝගයක් නොලැබීම නිසා ගොවීන් විරෝධතාවල",
+        scandal: "වසන්ත සමරසිංහ සහ ලාල් කාන්ත අමාත්‍යවරුන් මෙම දිස්ත්‍රික්කය නියෝජනය කරයි",
+      },
+      "north-western": {
+        name: "වයඹ පළාත",
+        capital: "කුරුණෑගල",
+        nppResult: "මිශ්‍ර ප්‍රතිඵල",
+        povertyNote: "ජීවන වියදම් අර්බුදය පවුල්වලට දැඩි ලෙස බලපායි",
+      },
+      eastern: {
+        name: "නැගෙනහිර පළාත",
+        capital: "ත්‍රිකුණාමලය",
+        nppResult: "දෙමළ/මුස්ලිම් ප්‍රදේශවල අඩු NPP සහයෝගයක්",
+        povertyNote: "පශ්චාත් යුධ ප්‍රජාවන් තුළ ඉහළ දරිද්‍රතාවයක්",
+        scandal: "පාස්කු ප්‍රහාරයේ වින්දිතයන් තවමත් පොරොන්දු වූ සාධාරණය බලාපොරොත්තුවෙන් සිටී",
+      },
+      central: {
+        name: "මධ්‍යම පළාත",
+        capital: "මහනුවර",
+        nppResult: "මධ්‍යම මට්ටමේ NPP සහයෝගයක්",
+        povertyNote: "වතු සේවකයින් වඩාත් අවදානමට ලක්ව ඇත — සැබෑ වැටුප් අර්බුදයට පෙර මට්ටමට වඩා අඩුය",
+      },
+      western: {
+        name: "බස්නාහිර පළාත",
+        capital: "කොළඹ",
+        nppResult: "ශක්තිමත් NPP සහයෝගයක් — නාගරික වෘත්තික පදනම",
+        povertyNote: "ජීවන වියදම් අර්බුදය; VAT වැඩිවීම් නිසා නාගරික දුප්පතුන් දැඩි ලෙස පීඩාවට පත්ව ඇත",
+        scandal: "භාණ්ඩාගාර වංචාව ($2.5M) සහ ගල්අඟුරු වංචාව කොළඹ ආයතන කේන්ද්‍ර කරගෙන සිදුවිය",
+      },
+      uva: {
+        name: "ඌව පළාත",
+        capital: "බදුල්ල",
+        nppResult: "මධ්‍යම මට්ටමේ සහයෝගයක්",
+        povertyNote: "ග්‍රාමීය දරිද්‍රතාවය ඉහළයි",
+      },
+      sabaragamuwa: {
+        name: "සබරගමුව පළාත",
+        capital: "රත්නපුර",
+        nppResult: "මධ්‍යම මට්ටමේ NPP සහයෝගයක්",
+        povertyNote: "මැණික් පතල් කම්කරු ප්‍රජාවන් ආර්ථික වශයෙන් පීඩාවට පත්ව ඇත",
+      },
+      southern: {
+        name: "දකුණු පළාත",
+        capital: "ගාල්ල",
+        nppResult: "සාම්ප්‍රදායික JVP පදනම; මෑතකාලීන වංචා නිසා සහයෝගය තරමක් හීන වී ඇත",
+        povertyNote: "ධීවර හා සංචාරක අංශ ආර්ථික ප්‍රතිපත්ති නිසා බලපෑමට ලක්ව ඇත",
+      },
+    },
     ideology: {
       heading: "දෘෂ්ටිවාදී විරුද්ධාභාසය",
       intro: "මාක්ස්වාදී-ලෙනින්වාදී කොමියුනිස්ට්වාදීන්ගෙන් ධනවාදී ක්‍රම අනුගමනය කරන පිරිසක් දක්වා.",
@@ -921,6 +1070,24 @@ export const translations: Record<string, any> = {
       },
       claimed: "ඔවුන් පැවසූ දේ",
       reality: "යථාර්ථය",
+      authoritarian_heading: "අධිකාරීවාදී ප්‍රවණතා",
+      authoritarian_points: {
+        point1_title: "විවේචකයන්ට එරෙහිව හදිසි බලතල",
+        point1_desc: "ඩිට්වා සුළි කුණාටු ප්‍රතිචාරය විවේචනය කරන සමාජ මාධ්‍ය පරිශීලකයින්ට එරෙහිව හදිසි නීති රෙගුලාසි භාවිතා කිරීම",
+        point2_title: "විගණකාධිපති ධුරය හිස්ව තැබීම",
+        point2_desc: "වඩාත් 'නම්‍යශීලී' අපේක්ෂකයෙකු අනුමත කරන තෙක් විගණකාධිපති තනතුර මාස ~10 ක් පුරා හිස්ව තැබීම",
+        point3_title: "බහුතරය නොමැතිව සභා පාලනය",
+        point3_desc: "පූර්ණ බහුතරයක් නොමැතිව පළාත් පාලන ආයතන පාලනය කිරීමට උත්සාහ කිරීම — 'යහපාලනය' කෙලෙසීමක් ලෙස හැඳින්වේ",
+        point4_title: "නීතිපතිවරයාට සමාජ මාධ්‍ය ප්‍රහාර",
+        point4_desc: "නීතිපතිවරයාට එරෙහිව එල්ල වූ සමාජ මාධ්‍ය ප්‍රහාරවලට රහසිගතව සහයෝගය දැක්වීම",
+        point5_title: "මාධ්‍ය නිදහසට තර්ජන",
+        point5_desc: "මාස 15ක් පුරා මාධ්‍ය නිදහසට තර්ජනයක් වූ සිදුවීම් කිහිපයක් SLWJA විසින් වාර්තා කර ඇත",
+        point6_title: "විශ්වාසභංගය පරාජය කිරීම",
+        point6_desc: "ගල්අඟුරු වංචාව මධ්‍යයේ බලශක්ති අමාත්‍යවරයාට එරෙහි විශ්වාසභංග යෝජනාව පරාජය කිරීමට පාර්ලිමේන්තු බහුතරය භාවිතා කිරීම",
+      },
+      wolf_heading: "බැටළු හම පොරවා ගත් වෘකයා",
+      wolf_body: "\"මෙම ව්‍යාපාරයේ ආරම්භක දෘෂ්ටිවාදය අධිරාජ්‍ය විරෝධය, ආර්ථික ස්වයංපෝෂිතභාවය, සීතල යුද්ධයේ සුපිරි බලවතුන්ගෙන් ස්වාධීන වීම සහ සමාජවාදී පාලනයක් යටතේ ජාතික සමගිය පිළිබඳ දැක්මක් මත පදනම් විය. එහෙත් අද වන විට, NPP ආඩම්බරයෙන් විදේශීය ආයෝජකයින් ඇරයුම් කරයි, IMF රාමුව ආරක්ෂා කරයි, සහ එහි අමාත්‍යවරුන් ක්‍රිප්ටෝ සහ කොටස් ආයෝජන පවත්වාගෙන යයි.\"",
+      wolf_attribution: "— වාර්තාගත දෘෂ්ටිවාදය සහ වත්මන් රජයේ ක්‍රියාකාරිත්වය අතර සැසඳීම",
     },
     hypo: {
       marxism: {
@@ -987,7 +1154,7 @@ export const translations: Record<string, any> = {
       },
     },
     ministers: {
-      heading: "මාක්ස්වාදී අමාත්‍යවරුන්ගේ ධනවාදී පසුම්බි",
+      heading: "මාක්ස්වාදී අමාත්‍යවරුන්ගේ",
       intro: "දශක ගණනාවක් පුරා ජනතා විමුක්ති පෙරමුණ තමන් කම්කරු පන්තියේ නියමුවන් ලෙස හඳුන්වා ගත්තේය. ඔවුන්ගේ ප්‍රකාශිත වත්කම් පවසන්නේ ඊට හාත්පසින්ම වෙනස් කතාවකි.",
       samarasinghe: {
         title: "වෙළඳ හා වාණිජ අමාත්‍ය",
@@ -1050,7 +1217,15 @@ export const translations: Record<string, any> = {
         title: "මනුෂ්‍ය පිරිවැය සැසඳීම",
         subtitle: "එක් එක් ගැටුම් හා සම්බන්ධ මරණ (ඇස්තමේන්තුගත)",
         lives: "ජීවිත",
+        conflict1: "1971 JVP කැරැල්ල",
+        conflict2: "1987-89 JVP කැරැල්ල",
+        conflict3: "LTTE සිවිල් යුද්ධය (1983-2009)",
+        conflict4: "2019 පසු ආරක්ෂක පිරිවැය",
       },
+      duration: "කාලසීමාව",
+      country_paralyzed: "රට අඩපණ විය",
+      economic_impact: "ආර්ථික බලපෑම",
+      estimated_cost: "ඇස්තමේන්තුගත පිරිවැය",
       quote1: {
         body: "\"JVP කැරලි ග්‍රාමීය ජීවිතයේ ව්‍යුහයම විනාශ කළේය. ව්‍යවසාය හා ආයෝජන සංවර්ධනය ඇනහිටියේය. අද JVP තම ස්වරූපය වෙනස් කර ඇතත්, එය හුදෙක් බැටළු හම පොරවා ගත් වෘකයෙකි!\"",
         attribution: "— ශ්‍රී ලංකා ආර්ථික ඉතිහාස පර්යේෂණ",
@@ -1060,9 +1235,40 @@ export const translations: Record<string, any> = {
         attribution: "— දි අයිලන්ඩ් (ශ්‍රී ලංකාව), 2025",
       },
     },
+    sources_title: "මූලාශ්‍ර සහ යොමු",
     disclaimer: {
       heading: "වියාචනය",
       body: "මෙම ලේඛනය පර්යේෂණ හා මහජන අවශ්‍යතා සඳහා, ප්‍රසිද්ධියේ ලබාගත හැකි ජාත්‍යන්තරව පිළිගත් විශ්වසනීය මූලාශ්‍ර මත සකස් කර ඇත. මෙය දේශපාලන පක්ෂයකට අනුග්‍රහයක් නොවන, පර්යේෂණ හා වගවීමේ ලේඛනයකි.",
+    },
+  },
+  it: {
+    site: {
+      title: "Registro di responsabilità politica dello Sri Lanka",
+      tagline: "La verità dietro le promesse",
+    },
+    scandals: {
+      note: "Nota",
+      note_text: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
+    },
+    scandal: {
+      coal: {
+        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
+      },
+      treasury: {
+        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
+      },
+      wealth: {
+        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
+      },
+      education: {
+        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
+      },
+      health: {
+        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
+      },
+      appt: {
+        note: "Queste sono le azioni di un governo che ha fatto campagna su una piattaforma anti-corruzione e di pulizia del governo, presentandosi come fondamentalmente diverso dal corrotto stabilimento politico che ha sostituito.",
+      },
     },
   },
 };

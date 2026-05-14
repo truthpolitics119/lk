@@ -40,7 +40,15 @@ const NavBar: React.FC = () => {
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === "en" ? "si" : "en");
+    if (language === "en") setLanguage("si");
+    else if (language === "si") setLanguage("it");
+    else setLanguage("en");
+  };
+
+  const languageLabel = {
+    en: "English",
+    si: "සිංහල",
+    it: "Italiano"
   };
 
   return (
@@ -81,7 +89,7 @@ const NavBar: React.FC = () => {
             className="ml-4 px-3 py-1.5 rounded-full text-xs font-bold bg-white/10 text-white hover:bg-white/20 transition-all flex items-center gap-2 border border-white/20"
           >
             <LucideIcon name="Languages" size={14} />
-            {language === "en" ? "සිංහල" : "English"}
+            {languageLabel[language]}
           </button>
         </div>
 
@@ -91,7 +99,7 @@ const NavBar: React.FC = () => {
             onClick={toggleLanguage}
             className="px-2 py-1 rounded-md text-[10px] font-bold bg-white/10 text-white border border-white/20"
           >
-            {language === "en" ? "සිංහල" : "EN"}
+            {language.toUpperCase()}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}

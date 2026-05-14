@@ -150,37 +150,37 @@ const IdeologySection: React.FC = () => {
 
         {/* Suppression of dissent */}
         <div className="bg-gradient-to-br from-[#1a0000] to-[#0d0000] border border-[#8B0000]/50 rounded-2xl p-6 mb-6">
-          <h3 className="text-white font-bold text-xl mb-5">Authoritarian Tendencies</h3>
+          <h3 className="text-white font-bold text-xl mb-5">{t("ideology.authoritarian_heading")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
-                title: "Emergency Powers Against Critics",
-                desc: "Used emergency regulations against social media users criticizing Cyclone Ditwah response",
+                title: t("ideology.authoritarian_points.point1_title"),
+                desc: t("ideology.authoritarian_points.point1_desc"),
                 icon: "Smartphone",
               },
               {
-                title: "Auditor General Vacancy",
-                desc: "Left the Auditor General position vacant for ~10 months until a more 'pliable' candidate was approved",
+                title: t("ideology.authoritarian_points.point2_title"),
+                desc: t("ideology.authoritarian_points.point2_desc"),
                 icon: "Landmark",
               },
               {
-                title: "Council Control Without Majority",
-                desc: "Attempted to control local councils without winning outright majorities — called 'tarnishing good governance'",
+                title: t("ideology.authoritarian_points.point3_title"),
+                desc: t("ideology.authoritarian_points.point3_desc"),
                 icon: "Vote",
               },
               {
-                title: "AG Social Media Attacks",
-                desc: "Tacitly supported social media brigade attacks against the Attorney General",
+                title: t("ideology.authoritarian_points.point4_title"),
+                desc: t("ideology.authoritarian_points.point4_desc"),
                 icon: "Scale",
               },
               {
-                title: "Media Freedom Threats",
-                desc: "SLWJA documented multiple incidents threatening media freedom over 15 months",
+                title: t("ideology.authoritarian_points.point5_title"),
+                desc: t("ideology.authoritarian_points.point5_desc"),
                 icon: "Newspaper",
               },
               {
-                title: "NCM Defeated by Steamroller",
-                desc: "Used parliamentary supermajority to defeat No-Confidence Motion against Energy Minister amid coal fraud",
+                title: t("ideology.authoritarian_points.point6_title"),
+                desc: t("ideology.authoritarian_points.point6_desc"),
                 icon: "Hammer",
               },
             ].map((item, i) => (
@@ -200,11 +200,11 @@ const IdeologySection: React.FC = () => {
           <div className="w-20 h-20 bg-black/40 rounded-full flex items-center justify-center border border-[#DAA520]/30 mx-auto mb-6">
             <LucideIcon name="Map" size={40} className="text-[#DAA520]" />
           </div>
-          <h3 className="text-[#DAA520] font-black text-2xl mb-3">The Wolf in Sheep's Clothing</h3>
+          <h3 className="text-[#DAA520] font-black text-2xl mb-3">{t("ideology.wolf_heading")}</h3>
           <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-lg">
-            "The movement's founding ideology rested on anti-imperialism, economic self-sufficiency, independence from Cold War superpowers, a commitment to incorruptibility, and a vision of national unity under socialist governance. Yet today, the NPP proudly courts foreign investors, upholds the IMF framework, and its ministers hold cryptocurrency and equity portfolios."
+            {t("ideology.wolf_body")}
           </p>
-          <p className="text-gray-500 text-sm mt-4">— Documented ideological record vs. current government practice</p>
+          <p className="text-gray-500 text-sm mt-4">{t("ideology.wolf_attribution")}</p>
         </div>
       </div>
     </section>

@@ -217,10 +217,10 @@ export const ministersWealth = [
 ];
 
 export const economicComparison = [
-  { category: "Poverty Rate", promised: 10, actual: 24.5, unit: "%" },
-  { category: "Salary Increase", promised: 25, actual: 3.5, unit: "%" },
-  { category: "Health Budget Growth", promised: 15, actual: -6.5, unit: "%" },
-  { category: "VAT Rate", promised: 8, actual: 20, unit: "%" },
+  { translationKey: "poverty_rate_comp", category: "Poverty Rate", promised: 10, actual: 24.5, unit: "%" },
+  { translationKey: "salary_increase", category: "Salary Increase", promised: 25, actual: 3.5, unit: "%" },
+  { translationKey: "health_budget", category: "Health Budget Growth", promised: 15, actual: -6.5, unit: "%" },
+  { translationKey: "vat_rate", category: "VAT Rate", promised: 8, actual: 20, unit: "%" },
 ];
 
 export const jvpTimeline = [
@@ -358,8 +358,8 @@ export const localElectionData = [
 ];
 
 export const insurrectionCosts = [
-  { conflict: "1971 JVP Insurrection", cost: 2.5, deaths: 5000 },
-  { conflict: "1987-89 JVP Insurrection", cost: 15, deaths: 60000 },
-  { conflict: "LTTE Civil War (1983-2009)", cost: 200, deaths: 100000 },
-  { conflict: "Post-2019 Security Costs", cost: 8, deaths: 269 },
+  { translationKey: "conflict1", conflict: "1971 JVP Insurrection", cost: 2.5, deaths: 5000 },
+  { translationKey: "conflict2", conflict: "1987-89 JVP Insurrection", cost: 15, deaths: 60000 },
+  { translationKey: "conflict3", conflict: "LTTE Civil War (1983-2009)", cost: 200, deaths: 100000 },
+  { translationKey: "conflict4", conflict: "Post-2019 Security Costs", cost: 8, deaths: 269 },
 ];

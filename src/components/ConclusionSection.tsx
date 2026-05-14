@@ -108,19 +108,16 @@ const ConclusionSection: React.FC = () => {
             <LucideIcon name="Map" size={40} className="text-[#DAA520]" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-white mb-4">
-            Sri Lanka Deserves Better
+            {t("verdict.closing")}
           </h3>
           <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-lg mb-5">
-            Nearly a quarter of Sri Lanka's population lives in poverty. Food insecurity affects 26% of households. 
-            Real wages remain below pre-crisis levels. Household debt stands at 38.5%. 
-            And the government that promised to change all this has instead continued austerity, 
-            overseen major scandals, and shown signs of authoritarian drift.
+            {t("verdict.closing_body")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
-              { label: "Poverty Rate", value: "24.5%", note: "Double pre-pandemic" },
-              { label: "Food Insecure Households", value: "26%", note: "Per World Bank 2024" },
-              { label: "Public Trust Lost", value: "34%", note: "Vote share drop in 6 months" },
+              { label: t("chart.poverty_rate"), value: "24.5%", note: t("verdict.stat.poverty_note") },
+              { label: t("chart.food_insecurity"), value: "26%", note: t("verdict.stat.food_note") },
+              { label: t("stats.vote_collapse"), value: "34%", note: t("stats.vote_collapse_detail").split("—")[0].trim() },
             ].map((stat, i) => (
               <div key={i} className="bg-black/40 rounded-xl p-4">
                 <div className="text-2xl font-black text-[#DAA520]">{stat.value}</div>
@@ -134,7 +131,7 @@ const ConclusionSection: React.FC = () => {
         {/* Sources */}
         <div className="bg-[#111] border border-[#2a2a2a] rounded-2xl p-6">
           <h3 className="text-gray-300 font-bold text-sm mb-4 flex items-center gap-2">
-            <LucideIcon name="BookOpen" size={16} /> Sources & References
+            <LucideIcon name="BookOpen" size={16} /> {t("sources_title")}
           </h3>
           <div className="flex flex-wrap gap-2">
             {sources.map((source, i) => (
@@ -147,7 +144,7 @@ const ConclusionSection: React.FC = () => {
             <p className="text-gray-500 text-xs leading-relaxed flex items-start gap-2">
               <LucideIcon name="AlertTriangle" size={14} className="mt-0.5 flex-shrink-0" />
               <span>
-                <strong className="text-gray-400">Disclaimer:</strong> This document is compiled from publicly available, internationally recognized credible sources for research and public interest documentation purposes. All data is sourced from named publications with verifiable references. This is a research and accountability record, not a political party endorsement.
+                <strong className="text-gray-400">{t("disclaimer.heading")}:</strong> {t("disclaimer.body")}
               </span>
             </p>
           </div>
