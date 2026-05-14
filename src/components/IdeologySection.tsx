@@ -3,7 +3,7 @@ import LucideIcon from "./LucideIcon";
 import { useTranslation } from "../i18n/LanguageContext";
 
 const IdeologySection: React.FC = () => {
-  const { t, language } = useTranslation();
+  const { t } = useTranslation();
 
   const contradictions = [
     {
@@ -75,11 +75,7 @@ const IdeologySection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 7</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {language === "si" ? (
-              <>දෘෂ්ටිවාදී <span className="text-[#DAA520]">විරුද්ධාභාසය</span></>
-            ) : (
-              <>{t("ideology.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("ideology.heading").split(" ").slice(1).join(" ")}</span></>
-            )}
+            {t("ideology.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("ideology.heading").split(" ").slice(1).join(" ")}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("ideology.intro")}

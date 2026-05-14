@@ -55,7 +55,7 @@ const sources = [
 ];
 
 const ConclusionSection: React.FC = () => {
-  const { t, language } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className="py-20 bg-[#050505] relative">
@@ -73,11 +73,7 @@ const ConclusionSection: React.FC = () => {
             <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Conclusion</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {language === "si" ? (
-              <>අවසාන <span className="text-[#DAA520]">තීන්දුව</span></>
-            ) : (
-              <>{t("verdict.heading")}</>
-            )}
+            {t("verdict.heading")}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("verdict.intro")}
