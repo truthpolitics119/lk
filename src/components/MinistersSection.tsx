@@ -63,7 +63,7 @@ const MinistersSection: React.FC = () => {
                   <LucideIcon name="ShieldAlert" size={12} /> {t("ministers.samarasinghe.investigation")}
                 </span>
               </div>
-              <h3 className="text-white font-black text-2xl mb-1">Wasantha Samarasinghe</h3>
+              <h3 className="text-white font-black text-2xl mb-1">{t("ministers.samarasinghe.name")}</h3>
               <p className="text-[#DAA520] font-semibold mb-3">{t("ministers.samarasinghe.wealth").split(":")[0]}: <span className="text-2xl font-black text-white">{t("ministers.samarasinghe.wealth").split(":")[1]}</span></p>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 {t("ministers.samarasinghe.body")}
@@ -92,7 +92,17 @@ const MinistersSection: React.FC = () => {
             <BarChart data={ministersWealth} layout="vertical">
               <CartesianGrid strokeDasharray="3 3" stroke="#2a2000" />
               <XAxis type="number" stroke="#666" tick={{ fill: "#999", fontSize: 11 }} tickFormatter={(v) => `Rs.${v}M`} />
-              <YAxis type="category" dataKey="name" stroke="#666" tick={{ fill: "#ccc", fontSize: 10 }} width={140} />
+              <YAxis 
+                type="category" 
+                dataKey="name" 
+                stroke="#666" 
+                tick={{ fill: "#ccc", fontSize: 10 }} 
+                width={140} 
+                tickFormatter={(v) => {
+                  const key = v.toLowerCase().replace(/\s/g, "_").replace(/\./g, "");
+                  return t(`ministers.names.${key}`) !== `ministers.names.${key}` ? t(`ministers.names.${key}`) : v;
+                }}
+              />
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="wealth" radius={[0, 6, 6, 0]} label={{ position: "right", fill: "#DAA520", fontSize: 11, formatter: (v: any) => `Rs.${v}M` }}>
                 {ministersWealth.map((_, i) => (
@@ -125,10 +135,17 @@ const MinistersSection: React.FC = () => {
               {t("ministers.ciaboc.body")}
             </p>
             <ul className="space-y-1.5">
-              {["Wasantha Samarasinghe", "Sunil Handunetti", "Bimal Rathnayake", "Dr. Nalinda Jayathissa", "Kumara Jayakody", "Deputy Min. Sunil Watagala"].map((name, i) => (
+              {[
+                { name: "Wasantha Samarasinghe", key: "samarasinghe" },
+                { name: "Sunil Handunetti", key: "handunetti" },
+                { name: "Bimal Rathnayake", key: "rathnayake" },
+                { name: "Dr. Nalinda Jayathissa", key: "jayathissa" },
+                { name: "Kumara Jayakody", key: "jayakody" },
+                { name: "Deputy Min. Sunil Watagala", key: "watagala" }
+              ].map((min, i) => (
                 <li key={i} className="text-gray-300 text-sm flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[#DAA520] rounded-full flex-shrink-0" />
-                  {name}
+                  {t(`ministers.ciaboc.ministers.${min.key}`)}
                 </li>
               ))}
             </ul>

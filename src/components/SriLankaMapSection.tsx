@@ -133,23 +133,33 @@ const SriLankaMapSection: React.FC = () => {
             <span className="text-[#4CAF50] text-sm font-semibold uppercase tracking-widest">Interactive Map</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("map.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("map.heading").split(" ").slice(1).join(" ")}</span>
+            {language === "si" ? (
+              <>අන්තර්ක්‍රියාකාරී <span className="text-[#DAA520]">සිතියම</span></>
+            ) : (
+              <>{t("map.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("map.heading").split(" ").slice(1).join(" ")}</span></>
+            )}
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            {t("map.instruction")}
+          <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+            {t("map.intro")}
           </p>
-        </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          {/* SVG Map */}
-          <div className="lg:w-1/2 flex justify-center">
-            <div className="relative">
-              <svg
-                viewBox="0 0 1000 1850"
-                className="w-full max-w-md"
-                style={{ filter: "drop-shadow(0 0 30px rgba(139,0,0,0.3))" }}
-              >
-                {/* Background glow */}
+          <div className="bg-[#111] border border-[#2a2a2a] rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden group">
+            {/* Watermark in map area */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none z-0">
+              <span className="text-8xl md:text-[180px] font-black whitespace-nowrap text-white">
+                {language === "si" ? "ශ්‍රී ලංකාව" : "SRI LANKA"}
+              </span>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-8 items-start relative z-10">
+              {/* SVG Map */}
+              <div className="lg:w-1/2 flex justify-center">
+                <div className="relative">
+                  <svg
+                      viewBox="0 0 1000 1850"
+                      className="w-full max-w-md"
+                      style={{ filter: "drop-shadow(0 0 30px rgba(139,0,0,0.3))" }}
+                    >
                 <defs>
                   <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stopColor="#8B0000" stopOpacity="0.1" />

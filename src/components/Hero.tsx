@@ -26,17 +26,6 @@ const Hero: React.FC = () => {
 
       {/* Animated flag stripes overlay */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-[#8B0000] to-transparent" />
-        <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-gradient-to-l from-[#006400] to-transparent" />
-      </div>
-
-      {/* Watermark icon */}
-      <div
-        className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
-        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-      >
-        <LucideIcon name="Map" size={600} className="text-white" strokeWidth={0.5} />
-      </div>
 
       {/* Main content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
