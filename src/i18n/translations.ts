@@ -6,7 +6,7 @@ export const translations: Record<string, any> = {
       description: "A comprehensive, data-driven examination of how the NPP/JVP came to power, their broken promises, governance scandals, violent history, and the real impact on ordinary Sri Lancans.",
     },
     nav: {
-      government: "Government",
+      government: "Marxist Ministers",
       broken_promises: "Broken Promises",
       scandals: "Major Scandals",
       vote_share_drop: "Vote Share Drop",
@@ -580,7 +580,7 @@ export const translations: Record<string, any> = {
     },
     nav: {
       government: "ආණ්ඩුව",
-      broken_promises: "බිඳවැටුණු පොරොන්දු",
+      broken_promises: "මාක්ස්වාදී අමාත්‍යවරු",
       scandals: "ප්‍රධාන වංචා සහ කූටචාර",
       vote_share_drop: "ඡන්ද ප්‍රතිශතයේ පසුබැසීම",
       lives_lost: "ජීවිත හානි (JVP ඉතිහාසය)",

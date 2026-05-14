@@ -50,7 +50,7 @@ const NavBar: React.FC = () => {
           <img 
             src="/logo.png" 
             alt="NPP Record Logo" 
-            className="w-10 h-auto rounded-md shadow-lg"
+            className="w-16 h-auto shadow-lg"
           />
           <span className="text-white font-bold text-sm ml-1 hidden sm:block">{t("site.title")}</span>
         </div>
