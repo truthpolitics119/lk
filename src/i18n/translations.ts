@@ -48,6 +48,15 @@ export const translations: Record<string, any> = {
     ministers: {
       heading: "Marxist Ministers, Capitalist Wallets",
       intro: "The JVP presented itself as champions of the working class for decades. Their declared wealth tells a very different story.",
+      names: {
+        samarasinghe: "Wasantha Samarasinghe",
+        lal_kantha: "Lal Kantha",
+        handunetti: "Sunil Handunetti",
+        rathnayake: "Bimal Rathnayake",
+        jayathissa: "Dr. Nalinda Jayathissa",
+        jayakody: "Kumara Jayakody",
+        watagala: "Sunil Watagala",
+      },
       samarasinghe: {
         title: "Trade & Commerce Minister",
         investigation: "Under CIABOC Investigation",
@@ -1154,8 +1163,17 @@ export const translations: Record<string, any> = {
       },
     },
     ministers: {
-      heading: "මාක්ස්වාදී අමාත්‍යවරු,ධනවාදී වත්කම්",
+      heading: "මාක්ස්වාදී අමාත්‍යවරු, ධනවාදී වත්කම්",
       intro: "දශක ගණනාවක් පුරා ජනතා විමුක්ති පෙරමුණ තමන් කම්කරු පන්තියේ නියමුවන් ලෙස හඳුන්වා ගත්තේය. ඔවුන්ගේ ප්‍රකාශිත වත්කම් පවසන්නේ ඊට හාත්පසින්ම වෙනස් කතාවකි.",
+      names: {
+        samarasinghe: "වසන්ත සමරසිංහ",
+        lal_kantha: "ලාල් කාන්ත",
+        handunetti: "සුනිල් හඳුන්නෙත්ති",
+        rathnayake: "බිමල් රත්නායක",
+        jayathissa: "වෛද්‍ය නලින්ද ජයතිස්ස",
+        jayakody: "කුමාර ජයකොඩි",
+        watagala: "සුනිල් වටගල",
+      },
       samarasinghe: {
         title: "වෙළඳ හා වාණිජ අමාත්‍ය",
         investigation: "CIABOC විමර්ශන යටතේ",

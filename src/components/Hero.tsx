@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
         style={{ transform: `translateY(${scrollY * 0.3}px)` }}
       >
-        <LucideIcon name="Map" size={600} className="text-white" strokeWidth={0.5} />
+        <LucideIcon name="Compass" size={600} className="text-white" strokeWidth={0.5} />
       </div>
 
       {/* Main content */}

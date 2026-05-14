@@ -8,11 +8,11 @@ import { useTranslation } from "../i18n/LanguageContext";
 
 const wealthColors = ["#8B0000", "#B8860B", "#8B4513", "#6B0000", "#A0522D", "#800000"];
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label, t }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-[#1a0505] border border-[#8B0000]/50 rounded-xl p-3 shadow-xl">
-        <p className="text-white font-bold text-sm mb-1">{label}</p>
+        <p className="text-white font-bold text-sm mb-1">{t(`ministers.names.${label}`)}</p>
         {payload.map((p: any, i: number) => (
           <p key={i} className="text-[#DAA520] text-sm">Rs. {p.value}M declared wealth</p>
         ))}
@@ -63,7 +63,7 @@ const MinistersSection: React.FC = () => {
                   <LucideIcon name="ShieldAlert" size={12} /> {t("ministers.samarasinghe.investigation")}
                 </span>
               </div>
-              <h3 className="text-white font-black text-2xl mb-1">Wasantha Samarasinghe</h3>
+              <h3 className="text-white font-black text-2xl mb-1">{t(`ministers.names.${ministersWealth[0].nameKey}`)}</h3>
               <p className="text-[#DAA520] font-semibold mb-3">{t("ministers.samarasinghe.wealth").split(":")[0]}: <span className="text-2xl font-black text-white">{t("ministers.samarasinghe.wealth").split(":")[1]}</span></p>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 {t("ministers.samarasinghe.body")}
@@ -92,8 +92,15 @@ const MinistersSection: React.FC = () => {
             <BarChart data={ministersWealth} layout="vertical">
               <CartesianGrid strokeDasharray="3 3" stroke="#2a2000" />
               <XAxis type="number" stroke="#666" tick={{ fill: "#999", fontSize: 11 }} tickFormatter={(v) => `Rs.${v}M`} />
-              <YAxis type="category" dataKey="name" stroke="#666" tick={{ fill: "#ccc", fontSize: 10 }} width={140} />
-              <Tooltip content={<CustomTooltip />} />
+              <YAxis 
+                type="category" 
+                dataKey="nameKey" 
+                stroke="#666" 
+                tick={{ fill: "#ccc", fontSize: 10 }} 
+                width={140} 
+                tickFormatter={(v) => t(`ministers.names.${v}`)}
+              />
+              <Tooltip content={<CustomTooltip t={t} />} />
               <Bar dataKey="wealth" radius={[0, 6, 6, 0]} label={{ position: "right", fill: "#DAA520", fontSize: 11, formatter: (v: any) => `Rs.${v}M` }}>
                 {ministersWealth.map((_, i) => (
                   <Cell key={i} fill={wealthColors[i % wealthColors.length]} />
@@ -125,10 +132,10 @@ const MinistersSection: React.FC = () => {
               {t("ministers.ciaboc.body")}
             </p>
             <ul className="space-y-1.5">
-              {["Wasantha Samarasinghe", "Sunil Handunetti", "Bimal Rathnayake", "Dr. Nalinda Jayathissa", "Kumara Jayakody", "Deputy Min. Sunil Watagala"].map((name, i) => (
+              {["samarasinghe", "handunetti", "rathnayake", "jayathissa", "jayakody", "watagala"].map((key, i) => (
                 <li key={i} className="text-gray-300 text-sm flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[#DAA520] rounded-full flex-shrink-0" />
-                  {name}
+                  {t(`ministers.names.${key}`)}
                 </li>
               ))}
             </ul>
