@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 pb-24 md:pt-0 md:pb-0">
       {/* Sri Lankan Flag inspired background */}
       <div
         className="absolute inset-0"
@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2">
         <div className="w-[24px] h-[40px] border-2 border-white/20 rounded-full flex justify-center p-1.5">
           <div className="w-1 h-2 bg-[#DAA520] rounded-full animate-scroll" />
         </div>

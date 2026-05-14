@@ -10,11 +10,16 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
+            <img 
+              src="https://flagcdn.com/w80/lk.png" 
+              alt="Sri Lanka Flag" 
+              className="w-12 h-auto rounded border border-white/5 shadow-lg"
+            />
             <div className="flex gap-1">
-              <div className="w-3 h-8 bg-[#8B0000] rounded-sm" />
-              <div className="w-1.5 h-8 bg-[#DAA520] rounded-sm" />
-              <div className="w-1.5 h-8 bg-[#FF8C00] rounded-sm" />
-              <div className="w-3 h-8 bg-[#006400] rounded-sm" />
+              <div className="w-1.5 h-8 bg-[#8B0000] rounded-sm" />
+              <div className="w-1 h-8 bg-[#DAA520] rounded-sm" />
+              <div className="w-1 h-8 bg-[#FF8C00] rounded-sm" />
+              <div className="w-1.5 h-8 bg-[#006400] rounded-sm" />
             </div>
             <div>
               <div className="text-white font-bold text-sm">{t("site.title")}</div>

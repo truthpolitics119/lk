@@ -47,11 +47,16 @@ const NavBar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="flex gap-1">
-            <div className="w-3 h-6 bg-[#8B0000] rounded-sm" />
-            <div className="w-1.5 h-6 bg-[#DAA520] rounded-sm" />
-            <div className="w-1.5 h-6 bg-[#FF8C00] rounded-sm" />
-            <div className="w-3 h-6 bg-[#006400] rounded-sm" />
+          <img 
+            src="https://flagcdn.com/w40/lk.png" 
+            alt="Sri Lanka Flag" 
+            className="w-8 h-auto rounded-sm border border-white/10 shadow-sm"
+          />
+          <div className="flex gap-1 ml-1">
+            <div className="w-1.5 h-6 bg-[#8B0000] rounded-sm" />
+            <div className="w-1 h-6 bg-[#DAA520] rounded-sm" />
+            <div className="w-1 h-6 bg-[#FF8C00] rounded-sm" />
+            <div className="w-1.5 h-6 bg-[#006400] rounded-sm" />
           </div>
           <span className="text-white font-bold text-sm ml-1 hidden sm:block">{t("site.title")}</span>
         </div>
