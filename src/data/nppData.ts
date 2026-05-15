@@ -112,6 +112,24 @@ export const scandals = [
   },
   {
     id: 3,
+    translationKey: "health",
+    title: "The 323 Container Case",
+    subtitle: "Colombo Port Customs Clearance Scandal",
+    severity: "critical",
+    date: "2025",
+    summary: "Controversial release of 323 containers from Colombo Port allegedly without proper customs inspection or duty payment. Allegations of political interference and favoritism toward connected importers raised serious questions about the NPP's anti-corruption stance.",
+    details: [
+      "323 containers allegedly cleared bypassing standard customs inspection procedures",
+      "Concerns raised about lost government revenue from unpaid/underpaid duties",
+      "Sri Lanka Customs officers' trade union flagged irregularities and political pressure",
+      "Opposition demanded full disclosure of importers, contents, and authorizing officials",
+      "Case undermined NPP claims of stopping corrupt practices at ports",
+    ],
+    color: "#8B0000",
+    icon: "Truck",
+  },  
+  {
+    id: 4,
     translationKey: "wealth",
     title: "Minister Wealth Scandal",
     subtitle: "Rs. 275 Million 'Marxist' Ministers",
@@ -129,7 +147,7 @@ export const scandals = [
     icon: "Home",
   },
   {
-    id: 4,
+    id: 5,
     translationKey: "education",
     title: "Education Module Scandal",
     subtitle: "Inappropriate Content in Schools",
@@ -146,7 +164,7 @@ export const scandals = [
     icon: "BookOpen",
   },
   {
-    id: 5,
+    id: 6,
     translationKey: "appt",
     title: "Political Appointments Scandal",
     subtitle: "Loyalty Over Competence",
@@ -162,24 +180,6 @@ export const scandals = [
     ],
     color: "#8B4513",
     icon: "Theater",
-  },
-  {
-    id: 6,
-    translationKey: "health",
-    title: "Health Spending Cuts",
-    subtitle: "Hospitals & Medicine Shortages",
-    severity: "high",
-    date: "2025 Budget",
-    summary: "Health budget cut from Rs. 410 billion (2024) to Rs. 383 billion (2025), worsening medicine shortages and hospital conditions despite election promises.",
-    details: [
-      "Rs. 27 billion cut in health spending",
-      "Medicine shortages worsened across public hospitals",
-      "Hospital conditions deteriorated",
-      "Contradicts campaign promises to improve healthcare",
-      "Austerity prioritized over humanitarian needs",
-    ],
-    color: "#8B0000",
-    icon: "Hospital",
   },
 ];
 
@@ -202,7 +202,7 @@ export const vatData = [
   { year: "2021", vat: 8 },
   { year: "2022", vat: 12 },
   { year: "2023", vat: 18 },
-  { year: "2024", vat: 20 },
+  { year: "2024", vat: 18 },
   { year: "2025", vat: 18 },
   { year: "2026", vat: 18 },
 ];
