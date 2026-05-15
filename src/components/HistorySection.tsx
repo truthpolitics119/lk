@@ -25,7 +25,8 @@ const HistorySection: React.FC = () => {
             <span className="text-[#FF6B6B] text-sm font-semibold uppercase tracking-widest">{t("section.sn6")}</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("history.heading").split("|")[0]} <span className="text-[#8B0000]">{t("history.heading").split("|")[1]}</span>
+            <span className="block">{t("history.heading").split("|")[0]}</span>
+            <span className="block text-[#8B0000]">{t("history.heading").split("|")[1]}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("history.intro")}
