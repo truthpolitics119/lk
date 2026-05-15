@@ -142,7 +142,7 @@ export const translations: Record<string, any> = {
       tax: {
         title: "Reduce Tax Burden",
         detail: "Remove taxes on food, medicine, and essentials",
-        reality: "VAT rose from 8% to 18%. Exemptions on essentials removed. World Bank called reforms 'particularly regressive.'",
+        reality: "VAT rose from 8% to 20%. Exemptions on essentials removed. World Bank called reforms 'particularly regressive.'",
       },
       salary: {
         title: "25% Salary Increase",
@@ -276,7 +276,7 @@ export const translations: Record<string, any> = {
       poverty_food_heading: "Poverty & Food Insecurity Rate (%)",
       poverty_doubled: "Poverty doubled from ~12% to 24.5% — back to early 2000s levels",
       vat_trajectory: "VAT Rate Trajectory (%)",
-      vat_regressive: "VAT rose from 8% to 18% — opposite of NPP's promise. World Bank called this 'particularly regressive.'",
+      vat_regressive: "VAT rose from 8% to 20% — opposite of NPP's promise. World Bank called this 'particularly regressive.'",
       vote_collapse: "NPP Vote Share Collapse",
       vote_collapse_detail: "Vote share dropped 34% — from 6.8M to 4.5M — in just 6 months",
       local_councils: "Local Council Distribution (May 2025)",
@@ -728,7 +728,7 @@ export const translations: Record<string, any> = {
       tax: {
         title: "බදු බර අඩු කිරීම",
         detail: "ආහාර, ඖෂධ සහ අත්‍යවශ්‍ය භාණ්ඩ මත බදු ඉවත් කිරීම",
-        reality: "VAT බද්ද 8% සිට 18% දක්වා ඉහළ නංවන ලදී. අත්‍යවශ්‍ය භාණ්ඩ සඳහා පැවති බදු සහන ඉවත් කරන ලදී.",
+        reality: "VAT බද්ද 8% සිට 20% දක්වා ඉහළ නංවන ලදී. අත්‍යවශ්‍ය භාණ්ඩ සඳහා පැවති බදු සහන ඉවත් කරන ලදී.",
       },
       salary: {
         title: "25% වැටුප් වැඩි කිරීම",
@@ -862,7 +862,7 @@ export const translations: Record<string, any> = {
       poverty_food_heading: "දරිද්‍රතාව සහ ආහාර අනාරක්ෂිතතා අනුපාතය (%)",
       poverty_doubled: "දුප්පත්භාවය ~12% සිට 24.5% දක්වා දෙගුණයකින් ඉහළ ගොස් ඇත — 2000 දශකයේ ආරම්භක මට්ටම් වෙත ආපසු.",
       vat_trajectory: "VAT අනුපාත ගමන්මඟ (%)",
-      vat_regressive: "VAT 8% සිට 18% දක්වා ඉහළ ගොස් ඇත — NPP පොරොන්දුවට පටහැනිව. ලෝක බැංකුව එය \"විශේෂයෙන්ම පසුබැසි\" ලෙස හඳුන්වා ඇත.",
+      vat_regressive: "VAT 8% සිට 20% දක්වා ඉහළ ගොස් ඇත — NPP පොරොන්දුවට පටහැනිව. ලෝක බැංකුව එය \"විශේෂයෙන්ම පසුබැසි\" ලෙස හඳුන්වා ඇත.",
       vote_collapse: "NPP ඡන්ද ප්‍රතිශතය කඩා වැටීම",
       vote_collapse_detail: "මාස 6 ක් තුළ ඡන්ද 34% ක පසුබැසීම — මිලියන 6.8 සිට මිලියන 4.5 දක්වා.",
       local_councils: "Local Council Distribution (May 2025)",

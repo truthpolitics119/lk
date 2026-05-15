@@ -192,7 +192,7 @@ export const povertyData = [
   { year: "2023", poverty: 24.9, food_insecurity: 27 },
   { year: "2024", poverty: 24.5, food_insecurity: 26 },
   { year: "2025", poverty: 24.0, food_insecurity: 25 },
-  { year: "2026", poverty: 23.5, food_insecurity: 24 },
+  { year: "2026", poverty: 23.5, food_insecurity: 26 },
 ];
 
 export const vatData = [
@@ -204,7 +204,7 @@ export const vatData = [
   { year: "2023", vat: 18 },
   { year: "2024", vat: 18 },
   { year: "2025", vat: 18 },
-  { year: "2026", vat: 18 },
+  { year: "2026", vat: 20 },
 ];
 
 export const voteShareData = [
