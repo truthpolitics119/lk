@@ -52,7 +52,7 @@ const NavBar: React.FC = () => {
             alt="NPP Record Logo" 
             className="w-16 h-auto shadow-lg"
           />
-          <span className="text-white font-bold text-sm ml-1 hidden sm:block">{t("site.title")}</span>
+          <span className="text-white font-bold text-sm ml-1 hidden sm:block">{t("site.sitename")}</span>
         </div>
 
         {/* Desktop nav */}

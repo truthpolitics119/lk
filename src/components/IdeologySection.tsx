@@ -198,7 +198,7 @@ const IdeologySection: React.FC = () => {
         {/* Final quote */}
         <div className="bg-[#111] border border-[#DAA520]/30 rounded-2xl p-6 text-center">
           <div className="w-20 h-20 bg-black/40 rounded-full flex items-center justify-center border border-[#DAA520]/30 mx-auto mb-6">
-            <LucideIcon name="Map" size={40} className="text-[#DAA520]" />
+            <LucideIcon name="Compass" size={40} className="text-[#DAA520]" />
           </div>
           <h3 className="text-[#DAA520] font-black text-2xl mb-3">{t("ideology.wolf_heading")}</h3>
           <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-lg">

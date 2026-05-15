@@ -1,6 +1,7 @@
 export const translations: Record<string, any> = {
   en: {
     site: {
+      sitename: "The Political Record",
       title: "Sri Lanka Political Accountability Record",
       tagline: "The Truth Behind the Promises",
       description: "A comprehensive, data-driven examination of how the NPP/JVP came to power, their broken promises, governance scandals, violent history, and the real impact on ordinary Sri Lancans.",
@@ -30,12 +31,12 @@ export const translations: Record<string, any> = {
       conclusion: "Conclusion",
     },
     cta: {
-      see_promises: "The Broken Promises",
+      see_promises: "The Broken | Promises",
       explore_scandals: "Explore Scandals",
       view_timeline: "View Timeline",
     },
     history: {
-      heading: "The JVP's Violent History",
+      heading: "The JVP's | Violent History",
       intro: "Before becoming a parliamentary party, the JVP conducted two bloody armed insurrections that killed tens of thousands and devastated Sri Lanka's economy.",
       first_insurrection: {
         title: "First Insurrection",
@@ -304,7 +305,7 @@ export const translations: Record<string, any> = {
       poverty_rate_comp: "Poverty Rate",
     },
     map: {
-      heading: "Impact Across Sri Lanka",
+      heading: "Impact Across | Sri Lanka",
       instruction: "Click on any province to see how NPP governance has affected communities across the island.",
       key_facts: "Key Regional Facts",
       election_result: "NPP Election Result",
@@ -587,6 +588,7 @@ export const translations: Record<string, any> = {
   },
   si: {
     site: {
+      sitename: "දේශපාලන වාර්තාව",
       title: "ශ්‍රී ලංකා දේශපාලන වගකීම් වාර්තාව",
       tagline: "පොරොන්දු පිටුපස සැඟවුණු සත්‍යය",
       description: "NPP/JVP බලයට පැමිණි ආකාරය, ඔවුන් විසින් බිඳ දැමූ පොරොන්දු, පාලන වංචා සහ ගැටළු, අතීතයේ සිදුකළ හින්සාත්මක ඉතිහාසය, සහ සාමාන්‍ය ශ්‍රී ලාංකික ජනතාවට එයින් ඇති වූ සැබෑ බලපෑම පිළිබඳ දත්ත මත පදනම් වූ සම්පූර්ණ විමර්ශනයක්.",
@@ -616,12 +618,12 @@ export const translations: Record<string, any> = {
       conclusion: "නිගමනය",
     },
     cta: {
-      see_promises: "බිඳවැටුණු පොරොන්දු",
+      see_promises: "බිඳවැටුණු | පොරොන්දු",
       explore_scandals: "වංචා සහ ගැටළු",
       view_timeline: "JVP/NPP කාලරේඛාව",
     },
     history: {
-      heading: "ජනතා විමුක්ති පෙරමුණේ ප්‍රචණ්ඩ ඉතිහාසය",
+      heading: "ජනතා විමුක්ති පෙරමුණේ | ප්‍රචණ්ඩ ඉතිහාසය",
       intro: "පාර්ලිමේන්තු පක්ෂයක් වීමට පෙර, ජනතා විමුක්ති පෙරමුණ විසින් දස දහස් ගණනක් මරා දමමින් සහ ශ්‍රී ලංකාවේ ආර්ථිකය විනාශ කරමින් ලේවැකි සන්නද්ධ කැරලි දෙකක් මෙහෙයවන ලදී.",
       first_insurrection: {
         title: "පළමු කැරැල්ල",
@@ -766,7 +768,7 @@ export const translations: Record<string, any> = {
       attribution: "හරින්ද්‍ර සහ ගමගේ, ශාස්ත්‍රීය විශ්ලේෂණය, 2025",
     },
     scandals: {
-      heading: "පාලන වංචා හා දූෂණ චෝදනා",
+      heading: "පාලන වංචා හා | දූෂණ චෝදනා",
       intro: "ඩොලර් මිලියන 2.5 ක භාණ්ඩාගාර සයිබර් වංචාවක් සිට ගල්අඟුරු මිලදී ගැනීමේ කූටචාර දක්වා — පිරිසිදු පාලනයක් පොරොන්දු වූ ආණ්ඩුව.",
       key_findings: "ප්‍රධාන නිරීක්ෂණ",
       note: "සටහන",
@@ -890,7 +892,7 @@ export const translations: Record<string, any> = {
       poverty_rate_comp: "දරිද්‍රතා අනුපාතය",
     },
     map: {
-      heading: "ශ්‍රී ලංකාව පුරා බලපෑම",
+      heading: "ශ්‍රී ලංකාව | පුරා බලපෑම",
       instruction: "දිවයින පුරා NPP පාලනය ප්‍රජාවන්ට ඇති කර ඇති බලපෑම බැලීමට ඕනෑම පළාතක් මත ක්ලික් කරන්න.",
       key_facts: "ප්‍රධාන කලාපීය කරුණු",
       election_result: "NPP මැතිවරණ ප්‍රතිඵල",

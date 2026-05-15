@@ -133,7 +133,7 @@ const SriLankaMapSection: React.FC = () => {
             <span className="text-[#4CAF50] text-sm font-semibold uppercase tracking-widest">{t("section.interactive_map")}</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            {t("map.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("map.heading").split(" ").slice(1).join(" ")}</span>
+            {t("map.heading").split("|")[0]} <span className="text-[#DAA520]">{t("map.heading").split("|")[1]}</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t("map.instruction")}
