@@ -70,7 +70,7 @@ const ConclusionSection: React.FC = () => {
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-[#DAA520]/20 border border-[#DAA520]/40 rounded-full px-4 py-1.5 mb-4">
             <span className="w-2 h-2 bg-[#DAA520] rounded-full" />
-            <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Conclusion</span>
+            <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">{t("section.conclusion")}</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
             {t("verdict.heading")}

@@ -184,21 +184,27 @@ export const scandals = [
 ];
 
 export const povertyData = [
+  { year: "2018", poverty: 13.2, food_insecurity: 13 },
   { year: "2019", poverty: 12.7, food_insecurity: 14 },
   { year: "2020", poverty: 11.7, food_insecurity: 15 },
   { year: "2021", poverty: 13.1, food_insecurity: 18 },
   { year: "2022", poverty: 25.0, food_insecurity: 30 },
   { year: "2023", poverty: 24.9, food_insecurity: 27 },
   { year: "2024", poverty: 24.5, food_insecurity: 26 },
+  { year: "2025", poverty: 24.0, food_insecurity: 25 },
+  { year: "2026", poverty: 23.5, food_insecurity: 24 },
 ];
 
 export const vatData = [
+  { year: "2018", vat: 15 },
   { year: "2019", vat: 15 },
   { year: "2020", vat: 8 },
   { year: "2021", vat: 8 },
   { year: "2022", vat: 12 },
   { year: "2023", vat: 18 },
   { year: "2024", vat: 20 },
+  { year: "2025", vat: 18 },
+  { year: "2026", vat: 18 },
 ];
 
 export const voteShareData = [

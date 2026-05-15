@@ -130,7 +130,7 @@ const SriLankaMapSection: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-[#006400]/20 border border-[#006400]/40 rounded-full px-4 py-1.5 mb-4">
             <span className="w-2 h-2 bg-[#4CAF50] rounded-full animate-pulse" />
-            <span className="text-[#4CAF50] text-sm font-semibold uppercase tracking-widest">Interactive Map</span>
+            <span className="text-[#4CAF50] text-sm font-semibold uppercase tracking-widest">{t("section.interactive_map")}</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
             {t("map.heading").split(" ")[0]} <span className="text-[#DAA520]">{t("map.heading").split(" ").slice(1).join(" ")}</span>
