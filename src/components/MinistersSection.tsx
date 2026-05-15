@@ -38,7 +38,7 @@ const MinistersSection: React.FC = () => {
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-[#B8860B]/30 border border-[#DAA520]/50 rounded-full px-4 py-1.5 mb-4">
             <span className="w-2 h-2 bg-[#DAA520] rounded-full animate-pulse" />
-            <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 3</span>
+            <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">{t("section.sn3")}</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
             {t("ministers.heading").split(",")[0]},<br /><span className="text-[#DAA520]">{t("ministers.heading").split(",")[1]?.trim() || t("ministers.heading").split(" ").slice(2).join(" ")}</span>

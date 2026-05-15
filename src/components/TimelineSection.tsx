@@ -29,7 +29,7 @@ const TimelineSection: React.FC = () => {
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-[#8B0000]/30 border border-[#8B0000]/50 rounded-full px-4 py-1.5 mb-4">
             <span className="w-2 h-2 bg-[#DAA520] rounded-full animate-pulse" />
-            <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">Section 5</span>
+            <span className="text-[#DAA520] text-sm font-semibold uppercase tracking-widest">{t("section.sn5")}</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
             {t("timeline.heading").split(" ")[0]} / {t("timeline.heading").split(" ")[2]} <span className="text-[#DAA520]">{t("timeline.heading").split(" ").slice(3).join(" ")}</span>
