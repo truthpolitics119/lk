@@ -105,7 +105,7 @@ const ConclusionSection: React.FC = () => {
           }}
         >
           <div className="w-20 h-20 bg-black/40 rounded-full flex items-center justify-center border border-white/10 mx-auto mb-6">
-            <LucideIcon name="Map" size={40} className="text-[#DAA520]" />
+            <LucideIcon name="Compass" size={40} className="text-[#DAA520]" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-white mb-4">
             {t("verdict.closing")}
